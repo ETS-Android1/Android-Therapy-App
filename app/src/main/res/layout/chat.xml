@@ -26,7 +26,7 @@
                 android:id="@+id/imageView2"
                 android:layout_width="52dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="945px"
+                android:layout_marginLeft="925px"
                 android:layout_marginTop="20px"
                 app:srcCompat="@drawable/ic_send_black_24dp" />
 

@@ -16,7 +16,7 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="75dp"
+            android:layout_height="70dp"
             android:layout_gravity="bottom"
             android:background="#D81B60"
             app:itemIconTint="@color/design_default_color_background"
@@ -24,33 +24,35 @@
 
             <ImageView
                 android:id="@+id/imageView9"
-                android:layout_width="76dp"
-                android:layout_height="66dp"
+                android:layout_width="62dp"
+                android:layout_height="54dp"
                 android:layout_marginLeft="840px"
                 android:layout_marginTop="20px"
-                app:srcCompat="@drawable/ic_build"
+                app:srcCompat="@drawable/ic_help_black_24dp"
                 tools:srcCompat="@drawable/ic_help_black_24dp" />
 
             <ImageView
                 android:id="@+id/imageView10"
-                android:layout_width="71dp"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="595px"
+                android:layout_width="53dp"
+                android:layout_height="64dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="587px"
                 app:srcCompat="@drawable/ic_settings_black_24dp" />
 
             <ImageView
                 android:id="@+id/imageView11"
-                android:layout_width="78dp"
-                android:layout_height="64dp"
-                android:layout_marginLeft="295px"
+                android:layout_width="60dp"
+                android:layout_height="57dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="302px"
                 android:layout_marginTop="20px"
                 app:srcCompat="@drawable/ic_home_black_24dp" />
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="67dp"
+                android:layout_width="60dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="50px"
+                android:layout_marginLeft="57px"
                 app:srcCompat="@drawable/ic_person_black_24dp" />
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
