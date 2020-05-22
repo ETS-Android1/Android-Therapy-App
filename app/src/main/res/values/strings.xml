@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Counselor</string>
+<!--    <string name="app_name">Counselor</string>-->
+    <string name="home" />
 </resources>
