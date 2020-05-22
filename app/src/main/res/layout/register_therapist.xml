@@ -6,50 +6,82 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/full_nameT"
+        android:id="@+id/f_name3"
         android:layout_width="323dp"
         android:layout_height="43dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="17dp"
         android:background="@drawable/inputfield"
         android:ems="10"
-        android:hint="    full name"
+        android:hint="    first name"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/id_no"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/l_name"
+        android:layout_width="323dp"
+        android:layout_height="43dp"
+        android:background="@drawable/inputfield"
+        android:ems="10"
+        android:hint="    last name"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="238dp" />
+
+    <EditText
+        android:id="@+id/f_name"
+        android:layout_width="323dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/inputfield"
+        android:ems="10"
+        android:hint="    first name"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/l_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/confirm_pass_regT"
         android:layout_width="323dp"
         android:layout_height="43dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="264dp"
+        android:layout_marginBottom="42dp"
         android:background="@drawable/inputfield"
         android:ems="10"
         android:hint="    confirm password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
 
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/register_btnT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/age_registerT"
+        android:id="@+id/id_no"
         android:layout_width="323dp"
         android:layout_height="43dp"
-        android:layout_marginTop="288dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="22dp"
         android:background="@drawable/inputfield"
         android:ems="10"
-        android:hint="    age"
+        android:hint="    SA ID number"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/password_registerT"
+        app:layout_constraintBottom_toTopOf="@+id/f_name"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,34 +89,27 @@
         android:id="@+id/username_registerT"
         android:layout_width="323dp"
         android:layout_height="43dp"
-        android:layout_marginTop="216dp"
-        android:layout_marginBottom="29dp"
         android:background="@drawable/inputfield"
         android:ems="10"
         android:hint="    username"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/age_registerT"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteY="296dp" />
 
     <EditText
         android:id="@+id/password_registerT"
         android:layout_width="323dp"
         android:layout_height="43dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="24dp"
         android:background="@drawable/inputfield"
         android:ems="10"
         android:hint="    password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/confirm_pass_regT"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="355dp" />
 
     <Button
         android:id="@+id/register_btnT"
@@ -92,16 +117,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
-        android:layout_marginTop="33dp"
         android:layout_marginEnd="275dp"
         android:layout_marginRight="275dp"
-        android:layout_marginBottom="182dp"
+        android:layout_marginBottom="57dp"
         android:background="@drawable/button"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirm_pass_regT" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/username_taken_txtT"
