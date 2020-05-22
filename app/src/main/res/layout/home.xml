@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- Main content -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_gravity="bottom"
+            android:background="#D81B60"
+            app:itemIconTint="@color/design_default_color_background"
+            app:itemTextColor="@color/design_default_color_background">
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="76dp"
+                android:layout_height="66dp"
+                android:layout_marginLeft="840px"
+                android:layout_marginTop="20px"
+                app:srcCompat="@drawable/ic_build"
+                tools:srcCompat="@drawable/ic_help_black_24dp" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="71dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="595px"
+                app:srcCompat="@drawable/ic_settings_black_24dp" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="78dp"
+                android:layout_height="64dp"
+                android:layout_marginLeft="295px"
+                android:layout_marginTop="20px"
+                app:srcCompat="@drawable/ic_home_black_24dp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="67dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50px"
+                app:srcCompat="@drawable/ic_person_black_24dp" />
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
