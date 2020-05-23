@@ -93,6 +93,7 @@
         android:layout_height="wrap_content"
         android:textColor="#B91717"
         app:layout_constraintBottom_toBottomOf="parent"
+
         app:layout_constraintEnd_toEndOf="@+id/confirm_pass_regP"
         app:layout_constraintHorizontal_bias="0.947"
         app:layout_constraintStart_toStartOf="@+id/confirm_pass_regP"
@@ -105,6 +106,7 @@
         android:layout_height="25dp"
         android:layout_marginTop="116dp"
         android:layout_marginBottom="42dp"
+
         android:text="The username should be nothing related to your real name"
         app:layout_constraintBottom_toTopOf="@+id/username_registerT"
         app:layout_constraintEnd_toEndOf="parent"
