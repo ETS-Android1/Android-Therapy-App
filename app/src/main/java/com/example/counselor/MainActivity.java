@@ -10,14 +10,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView regy;
-    private Button bt;
+//    private TextView regy;
+//    private Button bt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.login);
-        regy = findViewById(R.id.register_txt);
+//        regy = findViewById(R.id.register_txt);
 
 
 
