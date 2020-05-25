@@ -10,7 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".select_problem_p"></activity>
+
+        <activity android:name=".register_therapist"></activity>
+        <activity android:name=".homeActivity"></activity>
+
+
+
+        <activity android:name=".type_of_regi"></activity>
+        <activity android:name=".register_patient"></activity>
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
