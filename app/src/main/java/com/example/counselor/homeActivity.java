@@ -20,14 +20,5 @@ public class homeActivity extends AppCompatActivity {
 
 
     }
-    public Boolean getDetails(){
-        Boolean res = false;
-        PHPRequest p = new PHPRequest();
-        p.Request(homeActivity.this, "logg.php" );
 
-
-
-        return res;
-
-    }
 }
