@@ -18,17 +18,19 @@ public class type_of_regi extends AppCompatActivity {
 
      p = findViewById(R.id.choose_Pbtn);
      T = findViewById(R.id.choose_Tbtn);
+
      p.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View view) {
              setlayoutp();
-
+            //final String choice = "Patient";
          }
      });
     T.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             setlayoutt();
+            //public String choice = "Therapist";
         }
     });
 
