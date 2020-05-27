@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".select_problemT">
+
+    <Button
+        android:id="@+id/goOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="453dp"
+        android:layout_marginBottom="102dp"
+        android:background="@drawable/button"
+        android:text="Apply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <CheckBox
+        android:id="@+id/academics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginEnd="237dp"
+        android:layout_marginRight="237dp"
+        android:text="Academics"
+        app:layout_constraintBottom_toTopOf="@+id/RM"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/RM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginRight="157dp"
+        android:text="Romantic Relationships"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/family"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="71dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginEnd="266dp"
+        android:layout_marginRight="266dp"
+        android:text="Family"
+        app:layout_constraintBottom_toTopOf="@+id/academics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="217dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginLeft="69dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginRight="125dp"
+        android:layout_marginBottom="66dp"
+        android:text="Select what type of problems you specialize in"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/family"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
