@@ -32,13 +32,12 @@ public class PHPRequest{
     //    for example p.data after p.RequestWithParameters(MainActivity.this, "cars2.php",values);
     //    will have the result
 
+    String prefix = "https://lamp.ms.wits.ac.za/home/s2094007/";
+    public JSONArray data;
 
     public void PHPRequest(){
 
     }
-
-    String prefix = "https://lamp.ms.wits.ac.za/home/s2094007/";
-    public static JSONArray data = null;
 
     public void Request(final Activity a, String file){
         OkHttpClient client = new OkHttpClient();
