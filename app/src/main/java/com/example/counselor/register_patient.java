@@ -21,6 +21,7 @@ public class register_patient extends AppCompatActivity {
         passwordRP = findViewById(R.id.password_registerP);
         conpasswordRP = findViewById(R.id.confirm_pass_regP);
 
+
         rP = findViewById(R.id.register_btnP);
         rP.setOnClickListener(new View.OnClickListener() {
             @Override

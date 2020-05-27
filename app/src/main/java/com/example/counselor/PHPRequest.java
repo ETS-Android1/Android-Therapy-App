@@ -38,12 +38,12 @@ public class PHPRequest{
     }
 
     String prefix = "https://lamp.ms.wits.ac.za/home/s2094007/";
-    public JSONArray data = null;
+    public static JSONArray data = null;
 
     public void Request(final Activity a, String file){
         OkHttpClient client = new OkHttpClient();
 
-        Request request = new Request.Builder().url(prefix + file).build();
+        Request request = new Request.Builder().url("https://lamp.ms.wits.ac.za/home/s2094007/logg.php?username=new").build();
 
         client.newCall(request).enqueue(new Callback() {
             @Override
@@ -115,6 +115,7 @@ public class PHPRequest{
 //
 //                    }
 //                });
+
             }
 
             @Override
@@ -124,5 +125,7 @@ public class PHPRequest{
 
 
         });
+
+
     }
 }

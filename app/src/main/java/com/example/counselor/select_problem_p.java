@@ -16,11 +16,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class select_problem_p extends AppCompatActivity {
-    private RadioButton rbtn;
+    private RadioButton rbtn, rrr;
     private RadioGroup radioGroup;
     private Button applybtn;
     private TextView t;
-
+    private EditText n;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,13 +29,18 @@ public class select_problem_p extends AppCompatActivity {
         applybtn = findViewById(R.id.apply);
         radioGroup = findViewById(R.id.radiogroup);
         t = findViewById(R.id.test);
+        n = findViewById(R.id.none);
+
+        rrr = findViewById(R.id.other);
 
         applybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 int radioID = radioGroup.getCheckedRadioButtonId();
                 rbtn = findViewById(radioID);
-                String chosenProblem = rbtn.getText().toString();
+               final  String chosenProblem = rbtn.getText().toString();
+
 
 
 
