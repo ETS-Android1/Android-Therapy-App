@@ -6,13 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class register_therapist extends AppCompatActivity {
     private EditText fname,Lname, ID,mail ,usern, pass, conpass;
     private Button registeerr;
-    public String us,first,last,IDD,Mail,pa;
+    private TextView nom;
+    public static String us,first,last,IDD,Mail,pa;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_therapist);
@@ -21,6 +23,7 @@ public class register_therapist extends AppCompatActivity {
         ID = findViewById(R.id.id_no);
         mail = findViewById(R.id.email);
         usern = findViewById(R.id.username_registerT);
+        nom = findViewById(R.id.password_not_matchP);
         pass = findViewById(R.id.password_registerT);
         conpass = findViewById(R.id.confirm_pass_regT);
         registeerr = findViewById(R.id.register_btnT);
@@ -46,7 +49,13 @@ public class register_therapist extends AppCompatActivity {
                 Mail = mail.getText().toString();
                 us = usern.getText().toString();
                 pa = pass.getText().toString();
-                setlayout();
+                if(pa.equals(conpass.getText().toString())){
+                    setlayout();
+                }
+                else{
+                    nom.setText("Passwords don't match");
+                }
+
 
 
                 //for the person table

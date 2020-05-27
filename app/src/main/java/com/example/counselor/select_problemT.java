@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.TextView;
 
 public class select_problemT extends AppCompatActivity {
     private CheckBox fam,aca, rm;
     private Button ap;
+    private TextView tx5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,11 @@ public class select_problemT extends AppCompatActivity {
         aca = findViewById(R.id.academics);
         rm = findViewById(R.id.RM);
         ap = findViewById(R.id.goOn);
+        tx5 = findViewById(R.id.textView5);
+        register_therapist r = new register_therapist();
+        tx5.setText("hello" + r.us);
+
+
         ap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -35,7 +42,7 @@ public class select_problemT extends AppCompatActivity {
                 toPerson.RequestWithParameters(select_problemT.this, "register.php",PersonValues);
                 PHPRequest toTherapist = new PHPRequest();
                 ContentValues therapistValues = new ContentValues();
-                therapistValues.put("personID", 10);
+
                 therapistValues.put("name", r.first);
                 therapistValues.put("surname", r.last);
                 therapistValues.put("id_no", r.IDD);
@@ -69,11 +76,11 @@ public class select_problemT extends AppCompatActivity {
         if(fam.isChecked()){
             longString = longString + "family ";
         }
-        else if(aca.isChecked()){
+        if(aca.isChecked()){
             longString = longString + "academics ";
         }
 
-        else if(rm.isChecked()){
+        if(rm.isChecked()){
             longString = longString + "romantic_relationships ";
         }
 

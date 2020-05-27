@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class register_patient extends AppCompatActivity {
     private Button rP;
+    private TextView nom;
     private EditText usernameRP, passwordRP, conpasswordRP;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +22,7 @@ public class register_patient extends AppCompatActivity {
         usernameRP = findViewById(R.id.username_registerT);
         passwordRP = findViewById(R.id.password_registerP);
         conpasswordRP = findViewById(R.id.confirm_pass_regP);
+
 
 
         rP = findViewById(R.id.register_btnP);
@@ -32,14 +35,10 @@ public class register_patient extends AppCompatActivity {
                 if(passwordp.equals(passwordRP.getText().toString())){
 
                     setlayout();
-                    PHPRequest p = new PHPRequest();
-                    ContentValues values = new ContentValues();
-                    values.put("username" , usernamep);
-                    values.put("password", passwordp);
-                    values.put("type", "Patient");
-                    p.RequestWithParameters(register_patient.this, "register.php", values);
+
                 }
                 else{
+
                     // display password dont match
 
                 }
