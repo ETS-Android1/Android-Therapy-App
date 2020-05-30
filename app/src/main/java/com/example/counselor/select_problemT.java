@@ -2,6 +2,7 @@ package com.example.counselor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Person;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +10,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+
+import org.jetbrains.annotations.NotNull;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.HttpUrl;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class select_problemT extends AppCompatActivity {
     private CheckBox fam,aca, rm;
@@ -43,11 +58,35 @@ public class select_problemT extends AppCompatActivity {
                 ContentValues PersonValues = new ContentValues();
                 PersonValues.put("username", r.us);
                 PersonValues.put("password", r.pa);
+
                 PersonValues.put("type", "therapist");
                 toPerson.RequestWithParameters(select_problemT.this, "register.php",PersonValues);
-                PHPRequest toTherapist = new PHPRequest();
-                ContentValues therapistValues = new ContentValues();
+                // get the person-Id
 
+
+                MainActivity m = new MainActivity();
+
+
+
+
+
+
+
+                PHPRequest person = new PHPRequest();
+                ContentValues justValue = new ContentValues();
+
+
+
+
+
+
+
+                PHPRequest toTherapist = new PHPRequest();
+
+                ContentValues therapistValues = new ContentValues();
+                    // pass in the person id
+                therapistValues.put("personID", m.userID);
+                m.userID ++;
                 therapistValues.put("name", r.first);
                 therapistValues.put("surname", r.last);
                 therapistValues.put("id_no", r.IDD);
@@ -99,4 +138,8 @@ public class select_problemT extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+
+
+
 }

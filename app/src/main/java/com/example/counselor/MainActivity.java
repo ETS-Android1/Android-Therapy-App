@@ -30,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView regy,inc;
     private Button bt;
     private EditText user, passs;
-    SessionManager sessionManager;
 
 
 
@@ -39,9 +38,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.login);
-
-        sessionManager = new SessionManager(this);
-
         user = findViewById(R.id.username_login);
         passs = findViewById(R.id.password_login);
         regy = this.findViewById(R.id.register_txt);
@@ -60,7 +56,6 @@ public class MainActivity extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
 
                 OkHttpClient client = new OkHttpClient();
 
@@ -122,7 +117,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     private  void setlay(){
-        sessionManager.createSession(user.getText().toString());
         Intent intent = new Intent(this, homeActivity.class);
         startActivity(intent);
     }
