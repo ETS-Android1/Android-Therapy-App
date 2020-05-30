@@ -85,8 +85,6 @@ public class select_problemT extends AppCompatActivity {
 
                 ContentValues therapistValues = new ContentValues();
                     // pass in the person id
-                therapistValues.put("personID", m.userID);
-                m.userID ++;
                 therapistValues.put("name", r.first);
                 therapistValues.put("surname", r.last);
                 therapistValues.put("id_no", r.IDD);
