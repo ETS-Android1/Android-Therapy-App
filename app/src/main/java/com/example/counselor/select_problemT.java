@@ -14,10 +14,15 @@ public class select_problemT extends AppCompatActivity {
     private CheckBox fam,aca, rm;
     private Button ap;
     private TextView tx5;
+    SessionManager sessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_problem_t);
+
+        sessionManager = new SessionManager(this);
+
         fam = findViewById(R.id.family);
         aca = findViewById(R.id.academics);
         rm = findViewById(R.id.RM);
@@ -50,6 +55,8 @@ public class select_problemT extends AppCompatActivity {
                 therapistValues.put("noOfPatients",0);
                 therapistValues.put("problem", check());
                 toTherapist.RequestWithParameters(select_problemT.this, "registerTherapist.php", therapistValues);
+
+                sessionManager.createSession(r.us);
 
 
 

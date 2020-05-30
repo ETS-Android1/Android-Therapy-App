@@ -17,28 +17,29 @@ public class SessionManager {
 
     public static final String PREF_NAME = "LOGIN";
     public static final String LOGIN = "IS_LOGIN";
-    public static final String NAME = "USERNAME";
+    public static final String USERNAME = "USERNAME";
 //    public static final String EMAIL = "EMAIL";
 
     public SessionManager(Context context){
         this.context = context;
         sharedPreferences = context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
+        editor = sharedPreferences.edit();
     }
 
-    public void createSession(String name, String email){
+    public void createSession(String name){
         editor.putBoolean(LOGIN, true);
-        editor.putString(NAME, name);
+        editor.putString(USERNAME, name);
 //        editor.putString(EMAIL, email);
         editor.apply();
     }
 
-    public boolean isLogin(){
+    public boolean isLoggin(){
         return sharedPreferences.getBoolean(LOGIN, false);
     }
 
     public void checkLogin(){
 
-        if(!this.isLogin()){
+        if(!this.isLoggin()){
             Intent i = new Intent(context, MainActivity.class);
             context.startActivity(i);
             ((homeActivity) context).finish();
@@ -47,7 +48,7 @@ public class SessionManager {
 
     public HashMap<String, String> getUserDetail(){
         HashMap<String, String> user = new HashMap<>();
-        user.put(NAME, sharedPreferences.getString(NAME, null));
+        user.put(USERNAME, sharedPreferences.getString(USERNAME, null));
         return user;
     }
 

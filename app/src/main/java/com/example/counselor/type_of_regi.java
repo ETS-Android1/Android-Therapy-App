@@ -38,10 +38,12 @@ public class type_of_regi extends AppCompatActivity {
 
     public void setlayoutp(){
         Intent intent = new Intent(this ,register_patient.class );
+        intent.putExtra("type", "Patient");
         startActivity(intent);
     }
     public void setlayoutt(){
         Intent intent = new Intent(this , register_therapist.class);
+        intent.putExtra("type", "Therapist");
         startActivity(intent);
     }
 }
