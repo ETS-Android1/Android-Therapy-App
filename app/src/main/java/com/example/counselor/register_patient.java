@@ -25,6 +25,7 @@ public class register_patient extends AppCompatActivity {
 
 
 
+
         rP = findViewById(R.id.register_btnP);
         rP.setOnClickListener(new View.OnClickListener() {
             @Override

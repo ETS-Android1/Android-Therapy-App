@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView regy,inc;
     private Button bt;
     private EditText user, passs;
+    public Integer userID = 17;
 
 
 
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        bt.setOnClickListener(new View.OnClickListener() {
+       bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 HttpUrl.Builder urlBuilder = HttpUrl.parse("https://lamp.ms.wits.ac.za/home/s2094007/logg.php").newBuilder();
-                urlBuilder.addQueryParameter("username", "new");
+                urlBuilder.addQueryParameter("username", user.getText().toString());
                 String url = urlBuilder.build().toString();
                 //String url = "https://lamp.ms.wits.ac.za/home/s2094007/logg.php";
 
@@ -110,6 +111,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
     }
 
     public void setlayout() {
@@ -125,7 +128,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
         JSONArray ja = new JSONArray(json);
+
 
 
 
