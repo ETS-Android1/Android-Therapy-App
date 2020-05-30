@@ -45,7 +45,6 @@ public class select_problem_p extends AppCompatActivity {
                 int radioID = radioGroup.getCheckedRadioButtonId();
                 rbtn = findViewById(radioID);
                 MainActivity m = new MainActivity();
-                Integer id = m.userID;
 
                final  String chosenProblem = rbtn.getText().toString();
                PHPRequest p = new PHPRequest();
