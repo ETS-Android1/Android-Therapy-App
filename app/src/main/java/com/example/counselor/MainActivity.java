@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                                     } catch (JSONException e) {
                                         e.printStackTrace();
                                     }
-                                    try {
+                                    /*try {
                                         if(getDetails(respond)){
                                             setlay();
                                         }
@@ -102,7 +102,8 @@ public class MainActivity extends AppCompatActivity {
                                         }
                                     } catch (JSONException e) {
                                         e.printStackTrace();
-                                    }
+                                    }*/
+                                    setlay();
 
 
                                 }

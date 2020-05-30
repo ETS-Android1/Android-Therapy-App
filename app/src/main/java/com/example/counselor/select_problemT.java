@@ -44,7 +44,7 @@ public class select_problemT extends AppCompatActivity {
         ap = findViewById(R.id.goOn);
         tx5 = findViewById(R.id.textView5);
         register_therapist r = new register_therapist();
-        tx5.setText("hello" + r.us);
+        tx5.setText("hello " + r.us);
 
 
         ap.setOnClickListener(new View.OnClickListener() {
