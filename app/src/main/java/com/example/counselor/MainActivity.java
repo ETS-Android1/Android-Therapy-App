@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 HttpUrl.Builder urlBuilder = HttpUrl.parse("https://lamp.ms.wits.ac.za/home/s2094007/logg.php").newBuilder();
-                urlBuilder.addQueryParameter("username", "new");
+                urlBuilder.addQueryParameter("username", user.getText().toString());
                 String url = urlBuilder.build().toString();
                 //String url = "https://lamp.ms.wits.ac.za/home/s2094007/logg.php";
 
