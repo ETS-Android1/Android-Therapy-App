@@ -8,24 +8,24 @@ import android.widget.Button;
 
 public class settings extends AppCompatActivity {
     private Button log;
+    SessionManager sessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_settings);
-        log = findViewById(R.id.logout);
+
+        final SessionManager n = new SessionManager(this);
+        n.checkLogin();
+
+        log = findViewById(R.id.button);
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                logggout();
-
+                n.logout();
             }
-        });
+            });
     }
-    public void logggout(){
-        SessionManager n = new SessionManager(this);
-        n.logout();
 
-
-    }
 }
