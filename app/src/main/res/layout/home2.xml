@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!-- Main content -->
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="184dp"
+            android:layout_height="45dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="Hello"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+
+
+            android:layout_marginBottom="80dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="90dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:background="@drawable/book"
+                        ></ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="10dp"
+                        android:text="Academics"
+                        android:textStyle="bold"></TextView>
+
+
+                </androidx.cardview.widget.CardView>
+                <Space
+                    android:layout_width="40dp"
+                    android:layout_height="10dp"
+
+                    ></Space>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="90dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/romance"
+                        ></ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="10dp"
+                        android:text="Romance"
+                        android:textStyle="bold"></TextView>
+
+
+                </androidx.cardview.widget.CardView>
+                <Space
+                    android:layout_width="40dp"
+                    android:layout_height="10dp"
+
+                    ></Space>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="90dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/fam"
+                        ></ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="10dp"
+                        android:text="Family"
+                        android:textStyle="bold"></TextView>
+
+
+
+                </androidx.cardview.widget.CardView>
+                <Space
+                    android:layout_width="40dp"
+                    android:layout_height="10dp"
+
+                    ></Space>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="90dp">
+                    <ImageView
+                        android:layout_width="90dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/iconfinder_schizophrenia_health"
+                        ></ImageView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="10dp"
+                        android:text="Mental"
+                        android:textStyle="bold"></TextView>
+
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="#DACFEE"
+
+            app:itemTextColor="@color/design_default_color_background">
+
+            <ImageView
+                android:id="@+id/help"
+                android:layout_width="62dp"
+                android:layout_height="54dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="840px"
+                android:layout_marginBottom="3dp"
+
+                app:srcCompat="@android:drawable/ic_menu_help"
+                tools:srcCompat="@android:drawable/ic_menu_help" />
+
+            <ImageView
+                android:id="@+id/goToSettings"
+                android:layout_width="53dp"
+                android:layout_height="59dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="587px"
+                app:srcCompat="@drawable/iconfinder_ssettings_1214982" />
+
+            <ImageView
+                android:id="@+id/goToHome"
+                android:layout_width="60dp"
+                android:layout_height="57dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="302px"
+                android:layout_marginBottom="3dp"
+                app:srcCompat="@drawable/iconfinder_home_430102" />
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="57px"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="7dp"
+
+                app:srcCompat="@drawable/iconfinder_aartboard_18_3030707" />
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <Button
+            android:id="@+id/goToChat"
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="395dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/iconfinder_bubble_925926"
+            />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="440dp"
+            android:layout_marginRight="25dp"
+            android:text="Chat"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginBottom="195dp"
+            android:text="Categories"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="360dp"
+            android:layout_height="275dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="23dp"
+
+            android:layout_marginTop="110dp"
+            app:srcCompat="@drawable/main" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="184dp"
+            android:layout_height="45dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/helpingyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="60dp"
+            android:text="Let us help you .problem description."
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
