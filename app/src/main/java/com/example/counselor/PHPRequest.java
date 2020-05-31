@@ -33,47 +33,8 @@ public class PHPRequest{
     //    will have the result
 
     String prefix = "https://lamp.ms.wits.ac.za/home/s2094007/";
-    public JSONArray data;
 
     public void PHPRequest(){
-
-    }
-
-    public void Request(final Activity a, String file){
-        OkHttpClient client = new OkHttpClient();
-
-        Request request = new Request.Builder().url(prefix + file).build();
-
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onResponse(@NotNull okhttp3.Call call, @NotNull Response response) throws IOException {
-                final String responseData = response.body().string();
-                if(responseData!= null){
-                    try {
-                        data = new JSONArray(responseData);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                }
-
-//                a.runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//
-//                        TextView myTextView = (TextView) findViewById(R.id.myTextView);
-//                        myTextView.setText(responseData);
-//
-//                    }
-//                });
-            }
-
-            @Override
-            public void onFailure(@NotNull okhttp3.Call call, @NotNull IOException e) {
-                e.printStackTrace();
-            }
-            
-            
-        });
 
     }
 
@@ -97,13 +58,6 @@ public class PHPRequest{
             @Override
             public void onResponse(@NotNull okhttp3.Call call, Response response) throws IOException {
                 final String responseData = response.body().string();
-                if(responseData!= null){
-                    try {
-                        data = new JSONArray(responseData);
-                    } catch (JSONException e) {
-                        return;
-                    }
-                }
 
 //                a.runOnUiThread(new Runnable() {
 //                    @Override

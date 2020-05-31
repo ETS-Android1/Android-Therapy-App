@@ -57,6 +57,6 @@ public class SessionManager {
         editor.commit();
         Intent i = new Intent(context, MainActivity.class);
         context.startActivity(i);
-        ((homeActivity) context).finish();
+        ((settings) context).finish();
     }
 }

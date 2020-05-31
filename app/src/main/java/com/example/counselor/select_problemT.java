@@ -2,7 +2,6 @@ package com.example.counselor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Person;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,19 +10,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
-import org.jetbrains.annotations.NotNull;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.HttpUrl;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import static java.lang.Integer.parseInt;
 
 public class select_problemT extends AppCompatActivity {
     private CheckBox fam,aca, rm;
@@ -53,7 +40,7 @@ public class select_problemT extends AppCompatActivity {
                 register_therapist r = new register_therapist();
 
 
-                setlayout();
+
                 PHPRequest toPerson = new PHPRequest();
                 ContentValues PersonValues = new ContentValues();
                 PersonValues.put("username", r.us);
@@ -85,15 +72,18 @@ public class select_problemT extends AppCompatActivity {
 
                 ContentValues therapistValues = new ContentValues();
                     // pass in the person id
+                therapistValues.put("username", r.us);
                 therapistValues.put("name", r.first);
                 therapistValues.put("surname", r.last);
-                therapistValues.put("id_no", r.IDD);
+                therapistValues.put("id_no", parseInt(getIntent().getStringExtra("id_no")));
                 therapistValues.put("email", r.Mail);
                 therapistValues.put("noOfPatients",0);
                 therapistValues.put("problem", check());
                 toTherapist.RequestWithParameters(select_problemT.this, "registerTherapist.php", therapistValues);
 
                 sessionManager.createSession(r.us);
+
+                setlayout();
 
 
 

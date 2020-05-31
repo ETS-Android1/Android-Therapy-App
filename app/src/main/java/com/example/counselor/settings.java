@@ -16,14 +16,13 @@ public class settings extends AppCompatActivity {
 
         setContentView(R.layout.activity_settings);
 
-        final SessionManager n = new SessionManager(this);
-        n.checkLogin();
+        sessionManager = new SessionManager(this);
 
         log = findViewById(R.id.button);
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                n.logout();
+                sessionManager.logout();
             }
             });
     }

@@ -61,6 +61,10 @@ public class select_problem_p extends AppCompatActivity {
                 values.put("username", getIntent().getStringExtra("username"));
                 values.put("problem", chosenProblem);
                 p.RequestWithParameters(select_problem_p.this, "registerPatient.php", values);
+                values.clear();
+                values.put("patient_username", getIntent().getStringExtra("username"));
+                values.put("patient_problem", chosenProblem);
+                p.RequestWithParameters(select_problem_p.this, "match.php", values);
 
                 sessionManager.createSession(getIntent().getStringExtra("username"));
 

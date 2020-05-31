@@ -83,6 +83,7 @@ public class register_therapist extends AppCompatActivity {
     }
     public void setlayout(){
         Intent intent = new Intent(this, select_problemT.class);
+        intent.putExtra("id_no", ID.getText().toString());
         startActivity(intent);
 
     }
