@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static java.lang.Integer.parseInt;
+
 public class register_therapist extends AppCompatActivity {
     private EditText fname,Lname, ID,mail ,usern, pass, conpass;
     private Button registeerr;
@@ -30,19 +32,7 @@ public class register_therapist extends AppCompatActivity {
         registeerr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // for the therapist table
-                //auto increment number of patients
-                // create a layout to make the therapist choose problems
-               /* PHPRequest p = new PHPRequest();
-                ContentValues values = new ContentValues();
-                values.put("name", fname.getText().toString());
-                values.put("surname",Lname.getText().toString());
-                values.put("id_no",ID.getText().toString());
-                values.put("email",mail.getText().toString());
 
-               values.put("nofPatients",0);
-                //values.put("",pass.getText().toString());
-                    */
                 first = fname.getText().toString();
                 last = Lname.getText().toString();
                 IDD = ID.getText().toString();
@@ -57,21 +47,6 @@ public class register_therapist extends AppCompatActivity {
                 }
 
 
-
-                //for the person table
-                /*PHPRequest person = new PHPRequest();
-                ContentValues personvalues = new ContentValues();
-                personvalues.put("username", usern.getText().toString());
-                personvalues.put("password" , pass.getText().toString());
-                personvalues.put("type", "Therapist");
-                */
-
-
-
-
-
-
-
             }
         });
 
@@ -83,7 +58,7 @@ public class register_therapist extends AppCompatActivity {
     }
     public void setlayout(){
         Intent intent = new Intent(this, select_problemT.class);
-        intent.putExtra("id_no", ID.getText().toString());
+        intent.putExtra("id_no", IDD);
         startActivity(intent);
 
     }

@@ -51,35 +51,19 @@ public class select_problemT extends AppCompatActivity {
                 // get the person-Id
 
 
-                MainActivity m = new MainActivity();
 
 
-
-
-
-
-
-                PHPRequest person = new PHPRequest();
-                ContentValues justValue = new ContentValues();
-
-
-
-
-
-
-
-                PHPRequest toTherapist = new PHPRequest();
 
                 ContentValues therapistValues = new ContentValues();
                     // pass in the person id
                 therapistValues.put("username", r.us);
                 therapistValues.put("name", r.first);
                 therapistValues.put("surname", r.last);
-                therapistValues.put("id_no", parseInt(getIntent().getStringExtra("id_no")));
+                therapistValues.put("id_no", getIntent().getStringExtra("id_no"));
                 therapistValues.put("email", r.Mail);
-                therapistValues.put("noOfPatients",0);
+                therapistValues.put("noOfPatients", 0);
                 therapistValues.put("problem", check());
-                toTherapist.RequestWithParameters(select_problemT.this, "registerTherapist.php", therapistValues);
+                toPerson.RequestWithParameters(select_problemT.this, "registerTherapist.php", therapistValues);
 
                 sessionManager.createSession(r.us);
 
