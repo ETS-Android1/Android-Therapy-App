@@ -10,6 +10,12 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
 import static java.lang.Integer.parseInt;
 
 public class select_problemT extends AppCompatActivity {
@@ -56,6 +62,7 @@ public class select_problemT extends AppCompatActivity {
 
                 ContentValues therapistValues = new ContentValues();
                     // pass in the person id
+
                 therapistValues.put("username", r.us);
                 therapistValues.put("name", r.first);
                 therapistValues.put("surname", r.last);
@@ -106,10 +113,11 @@ public class select_problemT extends AppCompatActivity {
         return longString;
     }
     public void setlayout(){
-        Intent intent = new Intent(this, homeActivity.class);
+        Intent intent = new Intent(this, the.class);
         startActivity(intent);
 
     }
+
 
 
 

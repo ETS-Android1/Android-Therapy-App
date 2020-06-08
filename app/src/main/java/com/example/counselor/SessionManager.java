@@ -49,8 +49,13 @@ public class SessionManager {
     public HashMap<String, String> getUserDetail(){
         HashMap<String, String> user = new HashMap<>();
         user.put(USERNAME, sharedPreferences.getString(USERNAME, null));
+
         return user;
+
     }
+
+
+
 
     public void logout(){
         editor.clear();

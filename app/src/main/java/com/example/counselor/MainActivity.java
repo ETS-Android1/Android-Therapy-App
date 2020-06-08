@@ -27,7 +27,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView regy,inc;
+    private TextView regy,inc,oops;
     private Button bt;
     private EditText user, passs;
     SessionManager sessionManager;
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         regy = this.findViewById(R.id.register_txt);
         bt = findViewById(R.id.login_btn);
         inc = findViewById(R.id.incorrect);
+        oops = findViewById(R.id.textView2);
 
 
         regy.setOnClickListener(new View.OnClickListener() {
@@ -94,11 +95,17 @@ public class MainActivity extends AppCompatActivity {
                                         e.printStackTrace();
                                     }
                                     try {
-                                        if(getDetails(respond)){
-                                            setlay();
+                                        String type = getType(respond);
+                                        if(getDetails(respond) && type.equals("Patient")  ){
+                                           setlayPatient();
+                                        }
+                                        else if(getDetails(respond) && type.equals("therapist")){
+                                            setlaytherapist();
                                         }
                                         else{
                                             inc.setText("incorrect login details");
+
+
                                         }
                                     } catch (JSONException e) {
                                         e.printStackTrace();
@@ -118,11 +125,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void setlayout() {
         Intent intent = new Intent(this, type_of_regi.class);
         startActivity(intent);
     }
-    private  void setlay(){
+    private  void setlaytherapist(){
+        sessionManager.createSession(user.getText().toString());
+        Intent intent = new Intent(this, the.class);
+        startActivity(intent);
+    }
+    private  void setlayPatient(){
         sessionManager.createSession(user.getText().toString());
         Intent intent = new Intent(this, homeActivity.class);
         startActivity(intent);
@@ -148,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
                 JSONObject jo = ja.getJSONObject(i);
                 if (username.equals(jo.getString("PERSON_USERNAME")) && password.equals(jo.getString("PERSON_PASSWORD"))) {
-                    final String type = jo.getString("PERSON_TYPE");
+                   //final String type = jo.getString("PERSON_TYPE");
                     TF = true;
                 }
 
@@ -160,7 +173,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public String getType(String json) throws JSONException {
 
+
+
+        JSONArray ja = new JSONArray(json);
+
+
+
+
+        // store the things in an array;
+        String username = user.getText().toString();
+        String password = passs.getText().toString();
+
+
+        boolean TF = false;
+        String type="default";
+
+        for (int i = 0; i < ja.length(); i++) {
+
+
+            JSONObject jo = ja.getJSONObject(i);
+            if (username.equals(jo.getString("PERSON_USERNAME")) && password.equals(jo.getString("PERSON_PASSWORD"))) {
+               type = jo.getString("PERSON_TYPE");
+                TF = true;
+            }
+
+
+        }
+
+
+        return type;
+    }
 
 
 
