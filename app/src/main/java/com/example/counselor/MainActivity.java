@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                                            setlayPatient();
                                         }
                                         else if(getDetails(respond) && type.equals("therapist")){
-                                            setlaytherapist();
+                                            setlayPatient();
                                         }
                                         else{
                                             inc.setText("incorrect login details");
