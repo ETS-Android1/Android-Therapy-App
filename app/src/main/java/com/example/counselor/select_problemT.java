@@ -5,11 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 
+import com.cometchat.pro.core.CometChat;
+import com.cometchat.pro.exceptions.CometChatException;
+import com.cometchat.pro.models.User;
+
+import static com.example.counselor.Constants.authKey;
 import static java.lang.Integer.parseInt;
 
 public class select_problemT extends AppCompatActivity {
@@ -40,32 +46,22 @@ public class select_problemT extends AppCompatActivity {
                 register_therapist r = new register_therapist();
 
 
-
-                PHPRequest toPerson = new PHPRequest();
-                ContentValues PersonValues = new ContentValues();
-                PersonValues.put("username", r.us);
-                PersonValues.put("password", r.pa);
-
-                PersonValues.put("type", "therapist");
-                toPerson.RequestWithParameters(select_problemT.this, "register.php",PersonValues);
-                // get the person-Id
-
-
-
-
-
                 ContentValues therapistValues = new ContentValues();
-                    // pass in the person id
+                PHPRequest p2 = new PHPRequest();
                 therapistValues.put("username", r.us);
+                therapistValues.put("password", r.pa);
+                therapistValues.put("type", "Therapist");
                 therapistValues.put("name", r.first);
                 therapistValues.put("surname", r.last);
                 therapistValues.put("id_no", getIntent().getStringExtra("id_no"));
                 therapistValues.put("email", r.Mail);
-                therapistValues.put("noOfPatients", 0);
+                therapistValues.put("noOfPatients", "0");
                 therapistValues.put("problem", check());
-                toPerson.RequestWithParameters(select_problemT.this, "registerTherapist.php", therapistValues);
+                p2.RequestWithParameters(select_problemT.this, "reg.php", therapistValues);
 
                 sessionManager.createSession(r.us);
+
+                createChatUser();
 
                 setlayout();
 
@@ -106,8 +102,47 @@ public class select_problemT extends AppCompatActivity {
         return longString;
     }
     public void setlayout(){
-        Intent intent = new Intent(this, homeActivity.class);
-        startActivity(intent);
+        LoginToCometChat();
+    }
+
+
+    void createChatUser(){
+        User user = new User();
+        user.setUid(getIntent().getStringExtra("username")); // Replace with the UID for the user to be created
+        user.setName(getIntent().getStringExtra("username")); // Replace with the name of the user
+
+        CometChat.createUser(user, authKey, new CometChat.CallbackListener<User>() {
+            @Override
+            public void onSuccess(User user) {
+                Log.d("createUser", user.toString());
+            }
+
+            @Override
+            public void onError(CometChatException e) {
+                Log.e("createUser", e.getMessage());
+            }
+        });
+    }
+
+    void LoginToCometChat(){
+        String UID = getIntent().getStringExtra("username"); // Replace with the UID of the user to login
+        String TAG = "select_problemT";
+
+
+        CometChat.login(UID, authKey, new CometChat.CallbackListener<User>() {
+
+            @Override
+            public void onSuccess(User user) {
+                Log.d(TAG, "Login Successful : " + user.toString());
+                Intent intent = new Intent(select_problemT.this, homeActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onError(CometChatException e) {
+                Log.d(TAG, "Login failed with exception: " + e.getMessage());
+            }
+        });
 
     }
 

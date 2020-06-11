@@ -45,7 +45,6 @@ public class register_patient extends AppCompatActivity {
                 }
             }
         });
-        type_of_regi t = new type_of_regi();
 
 
 

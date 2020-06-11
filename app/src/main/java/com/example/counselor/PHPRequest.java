@@ -16,6 +16,8 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+import static android.webkit.ConsoleMessage.MessageLevel.LOG;
+
 public class PHPRequest{
 
 //    how to use class:
@@ -46,7 +48,6 @@ public class PHPRequest{
 
         for(String key:params.keySet()){
             builder.add(key, params.getAsString(key));
-
         }
 
 
@@ -59,15 +60,14 @@ public class PHPRequest{
             public void onResponse(@NotNull okhttp3.Call call, Response response) throws IOException {
                 final String responseData = response.body().string();
 
-//                a.runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//
-//                        TextView myTextView = (TextView) findViewById(R.id.textView);
-//                        myTextView.setText(responseData);
-//
-//                    }
-//                });
+                a.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+
+                        System.out.println("success request");
+
+                    }
+                });
 
             }
 

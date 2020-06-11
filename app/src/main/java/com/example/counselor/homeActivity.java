@@ -70,7 +70,7 @@ public class homeActivity extends AppCompatActivity {
 
     }
     public void setlayout() {
-        Intent intent = new Intent(this, chat.class);
+        Intent intent = new Intent(this, UserList.class);
         startActivity(intent);
     }
     public void setlayoutse() {
