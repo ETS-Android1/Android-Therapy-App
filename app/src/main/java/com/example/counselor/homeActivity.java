@@ -19,7 +19,6 @@ import java.util.HashMap;
 
 public class homeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     SessionManager sessionManager;
-    Button logout;
 
     private TextView helping,us;
     private ImageView settings, profile,chat;
@@ -45,6 +44,7 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
         us.setText(username);
 
 
+
         profile = findViewById(R.id.profile);
 
         chat.setOnClickListener(new View.OnClickListener() {
@@ -56,7 +56,7 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setlayoutpro();
+                setlayoutUsers();
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +86,7 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.seeUsers:
+            case R.id.userList:
                 setlayout();
                 break;
 
@@ -99,6 +99,10 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
     }
 
     public void setlayout() {
+        Intent intent = new Intent(this, Conversations.class);
+        startActivity(intent);
+    }
+    public void setlayoutUsers() {
         Intent intent = new Intent(this, UserList.class);
         startActivity(intent);
     }

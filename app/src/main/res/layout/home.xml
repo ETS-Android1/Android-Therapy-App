@@ -69,7 +69,7 @@
             app:itemTextColor="@color/design_default_color_background">
 
             <ImageView
-                android:id="@+id/help"
+                android:id="@+id/contacts"
                 android:layout_width="62dp"
                 android:layout_height="54dp"
                 android:layout_marginLeft="840px"

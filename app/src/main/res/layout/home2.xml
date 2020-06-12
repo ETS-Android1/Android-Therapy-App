@@ -153,15 +153,15 @@
             app:itemTextColor="@color/design_default_color_background">
 
             <ImageView
-                android:id="@+id/help"
+                android:id="@+id/contacts"
                 android:layout_width="47dp"
                 android:layout_height="54dp"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="355dp"
                 android:layout_marginBottom="3dp"
 
-                app:srcCompat="@android:drawable/ic_menu_help"
-                tools:srcCompat="@android:drawable/ic_menu_help" />
+                app:srcCompat="@drawable/ic_more_vert_black_24dp"
+                tools:srcCompat="@drawable/ic_more_vert_black_24dp" />
 
             <ImageView
                 android:id="@+id/goToSettings"
@@ -182,13 +182,13 @@
 
             <ImageView
                 android:id="@+id/profile"
-                android:layout_width="39dp"
-                android:layout_height="wrap_content"
+                android:layout_width="62dp"
+                android:layout_height="56dp"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="20dp"
                 android:layout_marginBottom="7dp"
 
-                app:srcCompat="@drawable/iconfinder_aartboard_18_3030707" />
+                app:srcCompat="@drawable/ic_people_outline_black_24dp" />
 
             <ImageView
                 android:id="@+id/newchat"
