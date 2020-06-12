@@ -82,22 +82,25 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        //start
+
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
+            public void onClick(View v) {
                 OkHttpClient client = new OkHttpClient();
-
-
                 HttpUrl.Builder urlBuilder = HttpUrl.parse("https://lamp.ms.wits.ac.za/home/s2094007/log.php").newBuilder();
-                urlBuilder.addQueryParameter("username", user.getText().toString());
-                String url = urlBuilder.build().toString();
-                //String url = "https://lamp.ms.wits.ac.za/home/s2094007/logg.php";
+                urlBuilder.addQueryParameter("username",user.getText().toString());
+                urlBuilder.addQueryParameter("password", passs.getText().toString());
+
+
+                String url =urlBuilder.build().toString();
 
 
                 Request request = new Request.Builder()
                         .url(url)
                         .build();
+               // inc.setText("not too far");
                 client.newCall(request).enqueue(new Callback() {
                     @Override
                     public void onFailure(@NotNull Call call, @NotNull IOException e) {
@@ -105,59 +108,50 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     @Override
+
                     public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                        if(response.isSuccessful()){
+                            final String respond = response.body().string();
+                            MainActivity.this.runOnUiThread(new Runnable() {
 
-                        final String responseData = response.body().string();
-                        JSONArray result = null;
+                                @Override
+                                public void run() {
+                                   // inc.setText("hello");
 
-                        if(responseData!= null) {
-                            try {
-                                result = new JSONArray(responseData);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                        else{
-                            System.out.println("nothing");
-                        }
-
-                        final JSONArray finalResult = result;
-                        MainActivity.this.runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-
-                                try {
+                                 /*  try {
+                                        processJson(respond);
+                                        inc.setText("yo");
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    } */
+                                   // inc.setText("inside try");
 
 
-                                    if(finalResult != null){
-                                        JSONObject a = finalResult.getJSONObject(0);
+                                    //inc.setText("deepd");
 
-                                        if(a.getString("message")=="success"){
+                                    try {
+                                        if(processJson(respond).equals("success")){
                                             setlay();
                                         }
-                                        else {
+                                        else{
                                             inc.setText("incorrect login details");
                                         }
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
                                     }
-                                    else{
-                                        inc.setText("Something went wrong, try again later!");
-                                    }
 
 
-
-
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
                                 }
-
-
-                            }
-                        });
-
+                            });
+                        }
                     }
                 });
+
             }
         });
+
+
+        //end
 
 
 
@@ -166,6 +160,22 @@ public class MainActivity extends AppCompatActivity {
     public void setlayout() {
         Intent intent = new Intent(this, type_of_regi.class);
         startActivity(intent);
+    }
+    public String processJson (String json) throws JSONException {
+       JSONArray ja  = new JSONArray(json);
+        // store the things in an array;
+
+
+        boolean TF = false;
+        JSONObject jo = ja.getJSONObject(0);
+        String test = jo.getString("message");
+
+
+
+
+        return test;
+
+
     }
     private  void setlay(){
         sessionManager.createSession(user.getText().toString());
