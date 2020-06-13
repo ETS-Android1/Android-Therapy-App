@@ -116,18 +116,6 @@ public class MainActivity extends AppCompatActivity {
 
                                 @Override
                                 public void run() {
-                                   // inc.setText("hello");
-
-                                 /*  try {
-                                        processJson(respond);
-                                        inc.setText("yo");
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
-                                    } */
-                                   // inc.setText("inside try");
-
-
-                                    //inc.setText("deepd");
 
                                     try {
                                         if(processJson(respond).equals("success")){

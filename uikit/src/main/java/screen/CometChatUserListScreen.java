@@ -137,7 +137,7 @@ public class CometChatUserListScreen extends Fragment {
                     // if etSearch is empty then fetch all users.
                     usersRequest=null;
                     rvUserList.clear();
-                    fetchUsers();
+//                    fetchUsers();
                 }
                 else {
                     // Search users based on text in etSearch field.
@@ -179,7 +179,7 @@ public class CometChatUserListScreen extends Fragment {
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
 
                 if (!recyclerView.canScrollVertically(1)) {
-                    fetchUsers();
+//                    fetchUsers();
                 }
 
             }
@@ -207,7 +207,7 @@ public class CometChatUserListScreen extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        fetchUsers();
+//        fetchUsers();
     }
 
 
