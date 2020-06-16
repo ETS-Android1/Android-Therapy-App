@@ -46,6 +46,15 @@ public class Conversations extends AppCompatActivity implements NavigationView.O
 
         profile = findViewById(R.id.profile);
 
+        View home = findViewById(R.id.goToHome);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Conversations.this, homeActivity.class);
+                startActivity(i);
+            }
+        });
+
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

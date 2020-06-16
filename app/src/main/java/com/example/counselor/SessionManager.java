@@ -29,7 +29,6 @@ public class SessionManager {
     public void createSession(String name){
         editor.putBoolean(LOGIN, true);
         editor.putString(USERNAME, name);
-//        editor.putString(EMAIL, email);
         editor.apply();
     }
 
@@ -43,6 +42,9 @@ public class SessionManager {
             Intent i = new Intent(context, MainActivity.class);
             context.startActivity(i);
             ((homeActivity) context).finish();
+            ((settings) context).finish();
+            ((UserList) context).finish();
+            ((Conversations) context).finish();
         }
     }
 

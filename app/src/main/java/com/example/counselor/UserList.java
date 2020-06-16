@@ -85,6 +85,15 @@ public class UserList extends AppCompatActivity implements NavigationView.OnNavi
 
         profile = findViewById(R.id.profile);
 
+        View home = findViewById(R.id.goToHome);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(UserList.this, homeActivity.class);
+                startActivity(i);
+            }
+        });
+
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -44,6 +44,7 @@
                     android:layout_height="90dp">
 
                     <ImageView
+                        android:id="@+id/academics"
                         android:layout_width="wrap_content"
                         android:layout_height="70dp"
                         android:background="@drawable/book"></ImageView>
@@ -70,6 +71,7 @@
                     android:layout_height="90dp">
 
                     <ImageView
+                        android:id="@+id/romance"
                         android:layout_width="90dp"
                         android:layout_height="70dp"
                         android:background="@drawable/romance"></ImageView>
@@ -96,6 +98,7 @@
                     android:layout_height="90dp">
 
                     <ImageView
+                        android:id="@+id/family"
                         android:layout_width="90dp"
                         android:layout_height="70dp"
                         android:background="@drawable/fam"></ImageView>
@@ -122,6 +125,7 @@
                     android:layout_height="90dp">
 
                     <ImageView
+                        android:id="@+id/mental"
                         android:layout_width="90dp"
                         android:layout_height="70dp"
                         android:background="@drawable/iconfinder_schizophrenia_health"></ImageView>

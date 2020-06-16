@@ -24,29 +24,13 @@ public class settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         sessionManager = new SessionManager(this);
+        sessionManager.checkLogin();
 
         log = findViewById(R.id.button);
         log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 sessionManager.logout();
-
-//                if (CometChat.getLoggedInUser()==null){
-//                    CometChat.login(authToken, new CometChat.CallbackListener<User>()
-//
-//                    @Override
-//                    public void onSuccess(User user) {
-//                        Log.d(TAG, "Login Successful : " + user.toString());
-//                    }
-//                    @Override
-//                    public void onError(CometChatException e) {
-//                        Log.d(TAG, "Login failed with exception: " + e.getMessage());
-//                    }
-//                    );
-//                }
-//                else {
-//                    // user already logged-in perform your action
-//                }
 
 
             }
