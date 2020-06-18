@@ -26,6 +26,10 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
+
+
+
+
         <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="100dp"
@@ -219,16 +223,16 @@
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent" />
-
-        <ImageView
-            android:id="@+id/imageView"
+        
+        <ViewFlipper
+            android:id="@+id/theflip"
             android:layout_width="360dp"
             android:layout_height="275dp"
             android:layout_gravity="top"
             android:layout_marginLeft="23dp"
+            android:layout_marginTop="130dp"
+            ></ViewFlipper>
 
-            android:layout_marginTop="110dp"
-            app:srcCompat="@drawable/main" />
 
         <TextView
             android:id="@+id/username"

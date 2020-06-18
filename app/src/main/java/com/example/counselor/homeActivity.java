@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,9 +25,11 @@ import constant.StringContract;
 
 public class homeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     SessionManager sessionManager;
+    Button logout;
+    private ViewFlipper viewFlipper;
 
     private TextView helping,us;
-    private ImageView settings, profile,chat, academics, family, mental, romance;
+    private ImageView settings, profile,chat;
 
 
 
@@ -83,6 +86,13 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
 
 
         profile = findViewById(R.id.profile);
+        int academicsimage[] = {R.drawable.academic1,R.drawable.academic2,R.drawable.academic3,R.drawable.academic4,R.drawable.academic5,R.drawable.academic6,R.drawable.academic7, R.drawable.academic8};
+        viewFlipper = findViewById(R.id.theflip);
+
+
+        for(int i =0 ; i < academicsimage.length; i ++){
+            flipper(academicsimage[i]);
+        }
 
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,7 +103,7 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setlayoutUsers();
+                setlayoutpro();
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
@@ -145,9 +155,10 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.userList:
+            case R.id.seeUsers:
                 setlayout();
                 break;
+
 
 
 
@@ -172,6 +183,18 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
     public void setlayoutpro() {
         Intent intent = new Intent(this, profile.class);
         startActivity(intent);
+    }
+    public void flipper(int image){
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+        viewFlipper.addView(imageView);
+        viewFlipper.setFlipInterval(10000);
+        viewFlipper.startFlipping();
+        viewFlipper.setInAnimation(this, android.R.anim.slide_in_left);
+        viewFlipper.setOutAnimation(this, android.R.anim.slide_out_right);
+
+
+
     }
 
 }
