@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.cometchat.pro.core.CometChat;
@@ -23,6 +24,7 @@ public class select_problemT extends AppCompatActivity {
     private Button ap;
     private TextView tx5;
     SessionManager sessionManager;
+    private ProgressBar loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class select_problemT extends AppCompatActivity {
 
         sessionManager = new SessionManager(this);
 
+        loading = findViewById(R.id.progressBar);
         fam = findViewById(R.id.family);
         aca = findViewById(R.id.academics);
         rm = findViewById(R.id.RM);
@@ -43,6 +46,8 @@ public class select_problemT extends AppCompatActivity {
         ap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ap.setVisibility(View.GONE);
+                loading.setVisibility(View.VISIBLE);
                 register_therapist r = new register_therapist();
 
 
@@ -135,12 +140,16 @@ public class select_problemT extends AppCompatActivity {
             public void onSuccess(User user) {
                 Log.d(TAG, "Login Successful : " + user.toString());
                 Intent intent = new Intent(select_problemT.this, homeActivity.class);
+                ap.setVisibility(View.VISIBLE);
+                loading.setVisibility(View.GONE);
                 startActivity(intent);
             }
 
             @Override
             public void onError(CometChatException e) {
                 Log.d(TAG, "Login failed with exception: " + e.getMessage());
+                ap.setVisibility(View.VISIBLE);
+                loading.setVisibility(View.GONE);
             }
         });
 

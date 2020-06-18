@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ public class select_problem_p extends AppCompatActivity {
     private TextView t;
     private EditText n;
     SessionManager sessionManager;
+    private ProgressBar loading;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,12 +55,15 @@ public class select_problem_p extends AppCompatActivity {
         radioGroup = findViewById(R.id.radiogroup);
         t = findViewById(R.id.test);
         n = findViewById(R.id.none);
+        loading = findViewById(R.id.progressBar);
 
         rrr = findViewById(R.id.other);
 
         applybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                applybtn.setVisibility(View.GONE);
+                loading.setVisibility(View.VISIBLE);
 
                 int radioID = radioGroup.getCheckedRadioButtonId();
                 rbtn = findViewById(radioID);
@@ -76,7 +81,6 @@ public class select_problem_p extends AppCompatActivity {
                 sessionManager.createSession(getIntent().getStringExtra("username"));
 
                 createChatUser();
-                LoginToCometChat();
 
                 setlayout();
 
@@ -91,10 +95,6 @@ public class select_problem_p extends AppCompatActivity {
 
     }
 
-    public void checkButton(View v){
-        int radioID = radioGroup.getCheckedRadioButtonId();
-        rbtn = findViewById(radioID);
-    }
 
     public void setlayout(){
         LoginToCometChat();
@@ -128,53 +128,19 @@ public class select_problem_p extends AppCompatActivity {
             public void onSuccess(User user) {
                 Log.d(TAG, "Login Successful : " + user.toString());
                 Intent intent = new Intent(select_problem_p.this , homeActivity.class);
+                applybtn.setVisibility(View.VISIBLE);
+                loading.setVisibility(View.GONE);
                 startActivity(intent);
             }
 
             @Override
             public void onError(CometChatException e) {
                 Log.d(TAG, "Login failed with exception: " + e.getMessage());
+                applybtn.setVisibility(View.VISIBLE);
+                loading.setVisibility(View.GONE);
             }
         });
 
     }
 
-    public void RequestWithParameters(final Activity a, String file, ContentValues params) {
-
-        OkHttpClient client = new OkHttpClient();
-
-        FormBody.Builder builder = new FormBody.Builder();
-
-        for(String key:params.keySet()){
-            builder.add(key, params.getAsString(key));
-        }
-
-
-        Request request = new Request.Builder().url("https://lamp.ms.wits.ac.za/home/s2094007/" + file).post(builder.build()).build();
-
-
-
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onResponse(@NotNull okhttp3.Call call, Response response) throws IOException {
-                final String responseData = response.body().string();
-
-
-
-                System.out.println(responseData);
-
-
-
-            }
-
-            @Override
-            public void onFailure(@NotNull okhttp3.Call call, @NotNull IOException e) {
-                e.printStackTrace();
-            }
-
-
-        });
-
-
-    }
 }

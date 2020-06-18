@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.cometchat.pro.core.AppSettings;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText user, passs;
     SessionManager sessionManager;
     private static final String TAG = "MainActivity";
-
+    private ProgressBar loading;
 
 
 
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.login);
 
         sessionManager = new SessionManager(this);
+        loading = findViewById(R.id.progressBar);
 
         AppSettings appSettings=new AppSettings.AppSettingsBuilder().subscribePresenceForAllUsers().setRegion(region).build();
 
@@ -88,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                bt.setVisibility(View.GONE);
+                loading.setVisibility(View.VISIBLE);
                 OkHttpClient client = new OkHttpClient();
                 HttpUrl.Builder urlBuilder = HttpUrl.parse("https://lamp.ms.wits.ac.za/home/s2094007/log.php").newBuilder();
                 urlBuilder.addQueryParameter("username",user.getText().toString());
@@ -123,6 +127,9 @@ public class MainActivity extends AppCompatActivity {
                                         }
                                         else{
                                             inc.setText("incorrect login details");
+                                            passs.setText("");
+                                            bt.setVisibility(View.VISIBLE);
+                                            loading.setVisibility(View.GONE);
                                         }
                                     } catch (JSONException e) {
                                         e.printStackTrace();
@@ -183,11 +190,15 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "Login Successful : " + user.toString());
                 Intent intent = new Intent(MainActivity.this, homeActivity.class);
                 startActivity(intent);
+                bt.setVisibility(View.VISIBLE);
+                loading.setVisibility(View.GONE);
             }
 
             @Override
             public void onError(CometChatException e) {
                 Log.d(TAG, "Login failed with exception: " + e.getMessage());
+                bt.setVisibility(View.VISIBLE);
+                loading.setVisibility(View.GONE);
             }
         });
 
