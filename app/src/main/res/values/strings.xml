@@ -2,6 +2,8 @@
     <!--    <string name="app_name">Counselor</string>-->
     <string name="home" />
     <string name="patient">Patient</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
     <string name="therapist">Therapist</string>
 
 

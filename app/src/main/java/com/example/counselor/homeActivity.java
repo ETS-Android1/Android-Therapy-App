@@ -12,7 +12,9 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.cometchat.pro.constants.CometChatConstants;
 import com.cometchat.pro.core.CometChat;
@@ -27,9 +29,11 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
     SessionManager sessionManager;
     Button logout;
     private ViewFlipper viewFlipper;
+    private DrawerLayout draw;
+    //private View toggle;
 
-    private TextView helping,us;
-    private ImageView settings, profile,chat;
+    private TextView helping,us, oops;
+    private ImageView settings, profile,chat, family, academics, romance, mental;
 
 
 
@@ -45,11 +49,17 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
         sessionManager.checkLogin();
         settings = findViewById(R.id.goToSettings);
         us = findViewById(R.id.username);
+       // toggle = findViewById(R.id.contacts);
+
+       // toggle = new ActionBarDrawerToggle(this,draw, R.string.Open, R.string.Close);
+
+
         helping = findViewById(R.id.helpingyou);
         SessionManager n = new SessionManager(this);
         HashMap<String, String> user = n.getUserDetail();
         String username = user.get(n.USERNAME);
         us.setText(username);
+
 
         academics = findViewById(R.id.academics);
         academics.setOnClickListener(new View.OnClickListener() {
@@ -155,8 +165,9 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.seeUsers:
-                setlayout();
+            case R.id.therapistprofile:
+                setlayouttherapistdet();
+
                 break;
 
 
@@ -166,6 +177,10 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
 
 
         return true;
+    }
+    public void setlayouttherapistdet(){
+        Intent intent = new Intent(this, therapistDetails.class);
+        startActivity(intent);
     }
 
     public void setlayout() {
