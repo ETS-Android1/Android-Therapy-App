@@ -18,7 +18,7 @@ public class SessionManager {
     public static final String PREF_NAME = "LOGIN";
     public static final String LOGIN = "IS_LOGIN";
     public static final String USERNAME = "USERNAME";
-//    public static final String EMAIL = "EMAIL";
+    public static final String isPatient = "isPatient";
 
     public SessionManager(Context context){
         this.context = context;
@@ -26,9 +26,10 @@ public class SessionManager {
         editor = sharedPreferences.edit();
     }
 
-    public void createSession(String name){
+    public void createSession(String name, String a){
         editor.putBoolean(LOGIN, true);
         editor.putString(USERNAME, name);
+        editor.putString(isPatient, a);
         editor.apply();
     }
 
@@ -51,6 +52,7 @@ public class SessionManager {
     public HashMap<String, String> getUserDetail(){
         HashMap<String, String> user = new HashMap<>();
         user.put(USERNAME, sharedPreferences.getString(USERNAME, null));
+        user.put(isPatient, sharedPreferences.getString(isPatient, null));
 
         return user;
 

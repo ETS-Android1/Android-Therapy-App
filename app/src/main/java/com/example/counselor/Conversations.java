@@ -100,10 +100,6 @@ public class Conversations extends AppCompatActivity implements NavigationView.O
             }
 
 
-            @Override
-            public void OnItemLongClick(Conversation var, int position) {
-                super.OnItemLongClick(var, position);
-            }
         });
     }
 

@@ -63,6 +63,7 @@ public class UserList extends AppCompatActivity implements NavigationView.OnNavi
         rlSearchBox= findViewById(com.cometchat.pro.uikit.R.id.rl_search_box);
         shimmerFrameLayout= findViewById(com.cometchat.pro.uikit.R.id.shimmer_layout);
         title = findViewById(com.cometchat.pro.uikit.R.id.tv_title);
+        title.setText("Connect");
         title.setTypeface(FontUtils.getInstance(this).getTypeFace(FontUtils.robotoMedium));
         noUserLayout = findViewById(com.cometchat.pro.uikit.R.id.no_user_layout);
         rvUserList.clear();

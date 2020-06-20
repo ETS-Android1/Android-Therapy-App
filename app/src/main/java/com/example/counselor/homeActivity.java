@@ -44,7 +44,11 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
         us = findViewById(R.id.username);
         helping = findViewById(R.id.helpingyou);
         SessionManager n = new SessionManager(this);
-        HashMap<String, String> user = n.getUserDetail();
+        HashMap<String, String> user = n.getUserDetail()
+                ;
+//        String isPatient = user.get(n.isPatient);
+//        string will either be "Therapist" or "Patient", all letters exactly
+
         String username = user.get(n.USERNAME);
         us.setText(username);
 

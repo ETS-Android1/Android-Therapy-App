@@ -123,7 +123,12 @@ public class MainActivity extends AppCompatActivity {
 
                                     try {
                                         if(processJson(respond).equals("success")){
-                                            setlay();
+                                            if(getType(respond).equals("Patient")){
+                                                setlay("Patient");
+                                            }
+                                            else{
+                                                setlay("Therapist");
+                                            }
                                         }
                                         else{
                                             inc.setText("incorrect login details");
@@ -152,6 +157,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private String getType(String json) throws JSONException {
+
+        JSONArray ja  = new JSONArray(json);
+
+        JSONObject jo = ja.getJSONObject(1);
+        String test = jo.getString("type");
+
+        return test;
+
+    }
+
     public void setlayout() {
         Intent intent = new Intent(this, type_of_regi.class);
         startActivity(intent);
@@ -161,19 +177,16 @@ public class MainActivity extends AppCompatActivity {
         // store the things in an array;
 
 
-        boolean TF = false;
         JSONObject jo = ja.getJSONObject(0);
         String test = jo.getString("message");
-
-
 
 
         return test;
 
 
     }
-    private  void setlay(){
-        sessionManager.createSession(user.getText().toString());
+    private  void setlay(String a){
+        sessionManager.createSession(user.getText().toString(), a);
         LoginToCometChat();
     }
 

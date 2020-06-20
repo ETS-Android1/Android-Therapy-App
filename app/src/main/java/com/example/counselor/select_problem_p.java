@@ -78,7 +78,7 @@ public class select_problem_p extends AppCompatActivity {
                p.RequestWithParameters(select_problem_p.this, "reg.php", values);
 
 
-                sessionManager.createSession(getIntent().getStringExtra("username"));
+                sessionManager.createSession(getIntent().getStringExtra("username"), "Patient");
 
                 createChatUser();
 

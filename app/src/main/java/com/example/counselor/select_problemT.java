@@ -64,7 +64,7 @@ public class select_problemT extends AppCompatActivity {
                 therapistValues.put("problem", check());
                 p2.RequestWithParameters(select_problemT.this, "reg.php", therapistValues);
 
-                sessionManager.createSession(r.us);
+                sessionManager.createSession(r.us, "Therapist");
 
                 createChatUser();
 
