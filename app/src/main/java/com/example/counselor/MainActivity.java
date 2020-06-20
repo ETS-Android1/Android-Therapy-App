@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
         JSONArray ja  = new JSONArray(json);
 
-        JSONObject jo = ja.getJSONObject(1);
+        JSONObject jo = ja.getJSONObject(2);
         String test = jo.getString("type");
 
         return test;
