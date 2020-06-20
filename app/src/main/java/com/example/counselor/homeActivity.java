@@ -9,9 +9,12 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ViewFlipper;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.cometchat.pro.constants.CometChatConstants;
 import com.cometchat.pro.core.CometChat;
@@ -24,9 +27,13 @@ import constant.StringContract;
 
 public class homeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     SessionManager sessionManager;
+    Button logout;
+    private ViewFlipper viewFlipper;
+    private DrawerLayout draw;
+    //private View toggle;
 
-    private TextView helping,us;
-    private ImageView settings, profile,chat, academics, family, mental, romance;
+    private TextView helping,us, oops;
+    private ImageView settings, profile,chat, family, academics, romance, mental;
 
 
 
@@ -42,6 +49,11 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
         sessionManager.checkLogin();
         settings = findViewById(R.id.goToSettings);
         us = findViewById(R.id.username);
+       // toggle = findViewById(R.id.contacts);
+
+       // toggle = new ActionBarDrawerToggle(this,draw, R.string.Open, R.string.Close);
+
+
         helping = findViewById(R.id.helpingyou);
         SessionManager n = new SessionManager(this);
         HashMap<String, String> user = n.getUserDetail()
@@ -51,6 +63,7 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
 
         String username = user.get(n.USERNAME);
         us.setText(username);
+
 
         academics = findViewById(R.id.academics);
         academics.setOnClickListener(new View.OnClickListener() {
@@ -87,6 +100,13 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
 
 
         profile = findViewById(R.id.profile);
+        int academicsimage[] = {R.drawable.academic1,R.drawable.academic2,R.drawable.academic3,R.drawable.academic4,R.drawable.academic5,R.drawable.academic6,R.drawable.academic7, R.drawable.academic8};
+        viewFlipper = findViewById(R.id.theflip);
+
+
+        for(int i =0 ; i < academicsimage.length; i ++){
+            flipper(academicsimage[i]);
+        }
 
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +117,7 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setlayoutUsers();
+                setlayoutpro();
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
@@ -149,9 +169,11 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.userList:
-                setlayout();
+            case R.id.therapistprofile:
+                setlayouttherapistdet();
+
                 break;
+
 
 
 
@@ -159,6 +181,10 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
 
 
         return true;
+    }
+    public void setlayouttherapistdet(){
+        Intent intent = new Intent(this, therapistDetails.class);
+        startActivity(intent);
     }
 
     public void setlayout() {
@@ -176,6 +202,18 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
     public void setlayoutpro() {
         Intent intent = new Intent(this, profile.class);
         startActivity(intent);
+    }
+    public void flipper(int image){
+        ImageView imageView = new ImageView(this);
+        imageView.setBackgroundResource(image);
+        viewFlipper.addView(imageView);
+        viewFlipper.setFlipInterval(10000);
+        viewFlipper.startFlipping();
+        viewFlipper.setInAnimation(this, android.R.anim.slide_in_left);
+        viewFlipper.setOutAnimation(this, android.R.anim.slide_out_right);
+
+
+
     }
 
 }

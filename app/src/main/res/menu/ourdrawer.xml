@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+
     
 
     >
+
+
+    <item android:id="@+id/therapistprofile"
+        android:icon="@drawable/doctor"
+        android:title="My Therapist"
+        ></item>
 
     <item android:id="@+id/seeUsers"
         android:icon="@drawable/ic_chat_black_24dp"
@@ -10,7 +18,16 @@
         ></item>
     <item android:id="@+id/Groups"
         android:icon="@drawable/ic_help_black_24dp"
-        android:title="Go to chat"
+        android:title="FAQs"
+        ></item>
+
+
+
+
+
+    <item android:id="@+id/policy"
+        android:icon="@drawable/policy"
+        android:title="Policy"
         ></item>
 
 

@@ -5,16 +5,125 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="189dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="236dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:srcCompat="@drawable/changeusername" />
+
     <TextView
         android:id="@+id/userdet"
-        android:layout_width="287dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="114dp"
-        android:layout_marginBottom="459dp"
+        android:layout_width="197dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="368dp"
+        android:text="Vhugala"
+        android:textColor="#7D757E"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.129"
+        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/userdet3"
+        android:layout_width="197dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="276dp"
+        android:text="Family"
+        android:textColor="#7D757E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/userdet4"
+        android:layout_width="197dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="52dp"
+        android:text="Change Passwrd"
+        android:textColor="#7D757E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/newback"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="135dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/user"
+            android:foregroundGravity="center"></ImageView>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/userdlet"
+        android:layout_width="251dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="164dp"
+        android:text="Change Username"
+        android:textColor="#7D757E"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="169dp"
+        android:layout_height="97dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/userdet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:srcCompat="@drawable/name" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="114dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="121dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:srcCompat="@drawable/probs" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="157dp"
+        android:layout_height="281dp"
+        android:layout_marginTop="244dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:srcCompat="@drawable/password" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
