@@ -22,7 +22,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class therapistDetails extends AppCompatActivity {
-    TextView u, f, l, i,s, e;
+    TextView u, f, l, i,s, e,six;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,10 +37,24 @@ public class therapistDetails extends AppCompatActivity {
         i = findViewById(R.id.textView20);
         s = findViewById(R.id.textView19);
         e = findViewById(R.id.hmail);
+        six = findViewById(R.id.textView6);
+
+
+        String isPatient = user.get(n.isPatient);
+        if(isPatient.equals("Patient")){
+            six.setText("More about your Therapist");
+
+        }
+        else{
+            six.setText("My Counselling profile");
+        }
+
+
+
         //u = findViewById(R.id.hunaam);
         OkHttpClient client = new OkHttpClient();
-        HttpUrl.Builder urlBuilder = HttpUrl.parse("https://lamp.ms.wits.ac.za/home/s2094007/newContact.php").newBuilder();
-        urlBuilder.addQueryParameter("username","vuyo");
+        HttpUrl.Builder urlBuilder = HttpUrl.parse("https://lamp.ms.wits.ac.za/home/s2094007/final.php").newBuilder();
+        urlBuilder.addQueryParameter("username",theirTherapist) ;
 
 
 

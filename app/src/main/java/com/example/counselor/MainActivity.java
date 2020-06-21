@@ -123,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     try {
                                         if(processJson(respond).equals("success")){
+                                            setlayoutu();
                                             if(getType(respond).equals("Patient")){
                                                 setlay("Patient");
                                             }
@@ -166,6 +167,10 @@ public class MainActivity extends AppCompatActivity {
 
         return test;
 
+    }
+    public void setlayoutu() {
+        Intent intent = new Intent(this, homeActivity.class);
+        startActivity(intent);
     }
 
     public void setlayout() {

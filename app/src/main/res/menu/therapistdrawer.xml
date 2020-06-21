@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-    
-
-    >
-
-
-    <item android:id="@+id/therapistprofile"
+    <item android:id="@+id/mydet"
         android:icon="@drawable/doctor"
-        android:title="More"
+        android:title="My Details"
         ></item>
-    <item android:id="@+id/myprofile"
-       android:icon="@drawable/prof"
+    <item android:id="@+id/myprofileT"
+        android:icon="@drawable/prof"
         android:title="Profile"
         ></item>
 
 
-    <item android:id="@+id/Groups"
+    <item android:id="@+id/GroupsT"
         android:icon="@drawable/ic_help_black_24dp"
         android:title="FAQs"
         ></item>
@@ -26,10 +20,11 @@
 
 
 
-    <item android:id="@+id/policy"
+    <item android:id="@+id/policyT"
         android:icon="@drawable/policy"
         android:title="Policy"
         ></item>
+
 
 
 

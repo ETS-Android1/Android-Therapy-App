@@ -43,6 +43,7 @@ public class the extends AppCompatActivity {
         sc = findViewById(R.id.relscroll);
 
         // send req for names
+
         OkHttpClient client = new OkHttpClient();
 
 
@@ -53,7 +54,9 @@ public class the extends AppCompatActivity {
         //HashMap<String, String> user = n.getUserDetail();
 
        // String username = user.get(n.PAT_THE_ID);
-        urlBuilder.addQueryParameter("therapist", "Family");
+        select_problemT select = new select_problemT();
+        String c = select.check();
+        urlBuilder.addQueryParameter("therapist","Family" );
 
 
 

@@ -165,7 +165,6 @@
         android:layout_marginStart="47dp"
         android:layout_marginEnd="306dp"
         android:layout_marginBottom="580dp"
-        android:text="More about your therapist"
         android:textColor="#474647"
         android:textSize="24sp"
         android:textStyle="bold"
