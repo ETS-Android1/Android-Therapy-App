@@ -106,7 +106,7 @@ public class profile extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //call logout
+                s.logout2();
 
 
             }
