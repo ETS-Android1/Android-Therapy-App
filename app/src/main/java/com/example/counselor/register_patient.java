@@ -50,12 +50,19 @@ public class register_patient extends AppCompatActivity {
 
     }
     public void setlayout(String username, String password){
-        Intent intent = new Intent(this , select_problem_p.class);
-        String type = getIntent().getStringExtra("type");
-        intent.putExtra("username", username);
-        intent.putExtra("password", password);
-        intent.putExtra("type", type);
-        startActivity(intent);
+        View t = findViewById(R.id.textView17);
+        t.setVisibility(View.GONE);
+        if(usernameRP.getText().toString().equals("")){
+            t.setVisibility(View.VISIBLE);
+        }
+        else{
+            Intent intent = new Intent(this , select_problem_p.class);
+            String type = getIntent().getStringExtra("type");
+            intent.putExtra("username", username);
+            intent.putExtra("password", password);
+            intent.putExtra("type", type);
+            startActivity(intent);
+        }
     }
 
 }

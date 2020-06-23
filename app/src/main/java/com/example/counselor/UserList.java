@@ -131,10 +131,6 @@ public class UserList extends AppCompatActivity implements NavigationView.OnNavi
 
             }
 
-            @Override
-            public void OnItemLongClick(User var, int position) {
-                super.OnItemLongClick(var, position);
-            }
         });
     }
 
@@ -263,4 +259,5 @@ public class UserList extends AppCompatActivity implements NavigationView.OnNavi
         rlSearchBox.setVisibility(View.VISIBLE);
 
     }
+
 }

@@ -1,5 +1,5 @@
 <resources>
-    <!--    <string name="app_name">Counselor</string>-->
+    <string name="app_name">Counsellor</string>
     <string name="home" />
     <string name="patient">Patient</string>
     <string name="Open">Open</string>

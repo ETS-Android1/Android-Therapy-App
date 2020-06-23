@@ -7,8 +7,8 @@
 
     <EditText
         android:id="@+id/username_login"
-        android:layout_width="323dp"
-        android:layout_height="43dp"
+        android:layout_width="218dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
@@ -16,10 +16,8 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="55dp"
-        android:layout_marginLeft="55dp"
         android:layout_marginTop="244dp"
         android:layout_marginEnd="37dp"
-        android:layout_marginRight="37dp"
         android:background="@drawable/inputfield"
         android:ems="10"
         android:hint="    username"
@@ -31,12 +29,10 @@
 
     <EditText
         android:id="@+id/password_login"
-        android:layout_width="323dp"
-        android:layout_height="43dp"
+        android:layout_width="218dp"
+        android:layout_height="39dp"
         android:layout_marginStart="55dp"
-        android:layout_marginLeft="53dp"
         android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
         android:layout_marginBottom="292dp"
         android:background="@drawable/inputfield"
         android:ems="10"
@@ -92,34 +88,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="54dp"
-        android:layout_marginLeft="54dp"
-        android:layout_marginTop="177dp"
-        android:layout_marginEnd="259dp"
-        android:layout_marginRight="259dp"
-        android:layout_marginBottom="58dp"
+        android:layout_marginBottom="32dp"
         android:text="Not registered?"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/register_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="266dp"
+        android:layout_marginTop="240dp"
         android:clickable="true"
-        android:layout_marginEnd="188dp"
-        android:layout_marginRight="188dp"
-        android:layout_marginBottom="57dp"
         android:text="register"
         android:textColor="@color/red"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/password_login" />
 
@@ -127,15 +111,11 @@
         android:id="@+id/incorrect"
         android:layout_width="197dp"
         android:layout_height="24dp"
-        android:layout_marginStart="271dp"
-        android:layout_marginLeft="271dp"
-        android:layout_marginEnd="81dp"
-        android:layout_marginRight="81dp"
-        android:layout_marginBottom="260dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="8dp"
+        android:textColor="#FA1605"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_login" />
 
     <ProgressBar
         android:id="@+id/progressBar"

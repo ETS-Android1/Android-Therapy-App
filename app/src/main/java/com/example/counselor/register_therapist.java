@@ -57,10 +57,17 @@ public class register_therapist extends AppCompatActivity {
 
     }
     public void setlayout(){
-        Intent intent = new Intent(this, select_problemT.class);
-        intent.putExtra("id_no", IDD);
-        intent.putExtra("username", us);
-        startActivity(intent);
+        View t = findViewById(R.id.textView5);
+        t.setVisibility(View.GONE);
+        if(fname.getText().toString().equals("")||Lname.getText().toString().equals("")||ID.getText().toString().equals("")||mail.getText().toString().equals("")||usern.getText().toString().equals("")||pass.getText().toString().equals("")){
+            t.setVisibility(View.VISIBLE);
+        }
+        else {
+            Intent intent = new Intent(this, select_problemT.class);
+            intent.putExtra("id_no", IDD);
+            intent.putExtra("username", us);
+            startActivity(intent);
+        }
 
     }
 }

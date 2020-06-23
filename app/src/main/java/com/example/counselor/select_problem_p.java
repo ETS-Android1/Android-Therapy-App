@@ -128,6 +128,7 @@ public class select_problem_p extends AppCompatActivity {
             public void onSuccess(User user) {
                 Log.d(TAG, "Login Successful : " + user.toString());
                 Intent intent = new Intent(select_problem_p.this , homeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 applybtn.setVisibility(View.VISIBLE);
                 loading.setVisibility(View.GONE);
                 startActivity(intent);

@@ -90,63 +90,71 @@ public class MainActivity extends AppCompatActivity {
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                inc.setText("");
                 bt.setVisibility(View.GONE);
                 loading.setVisibility(View.VISIBLE);
-                OkHttpClient client = new OkHttpClient();
-                HttpUrl.Builder urlBuilder = HttpUrl.parse("https://lamp.ms.wits.ac.za/home/s2094007/log.php").newBuilder();
-                urlBuilder.addQueryParameter("username",user.getText().toString());
-                urlBuilder.addQueryParameter("password", passs.getText().toString());
+                if(user.getText().toString().equals("")|| passs.getText().toString().equals("")){
+                    inc.setText("Please double check your form!");
+                    bt.setVisibility(View.VISIBLE);
+                    loading.setVisibility(View.GONE);
+                }
+                else{
+                    OkHttpClient client = new OkHttpClient();
+                    HttpUrl.Builder urlBuilder = HttpUrl.parse("https://lamp.ms.wits.ac.za/home/s2094007/log.php").newBuilder();
+                    urlBuilder.addQueryParameter("username",user.getText().toString());
+                    urlBuilder.addQueryParameter("password", passs.getText().toString());
 
 
-                String url =urlBuilder.build().toString();
+                    String url =urlBuilder.build().toString();
 
 
-                Request request = new Request.Builder()
-                        .url(url)
-                        .build();
-               // inc.setText("not too far");
-                client.newCall(request).enqueue(new Callback() {
-                    @Override
-                    public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                        e.printStackTrace();
-                    }
+                    Request request = new Request.Builder()
+                            .url(url)
+                            .build();
+                    // inc.setText("not too far");
+                    client.newCall(request).enqueue(new Callback() {
+                        @Override
+                        public void onFailure(@NotNull Call call, @NotNull IOException e) {
+                            e.printStackTrace();
+                        }
 
-                    @Override
+                        @Override
 
-                    public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                        if(response.isSuccessful()){
-                            final String respond = response.body().string();
-                            MainActivity.this.runOnUiThread(new Runnable() {
+                        public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+                            if(response.isSuccessful()){
+                                final String respond = response.body().string();
+                                MainActivity.this.runOnUiThread(new Runnable() {
 
-                                @Override
-                                public void run() {
+                                    @Override
+                                    public void run() {
 
-                                    try {
-                                        if(processJson(respond).equals("success")){
-                                            setlayoutu();
-                                            if(getType(respond).equals("Patient")){
-                                                setlay("Patient");
+                                        try {
+                                            if(processJson(respond).equals("success")){
+                                                setlayoutu();
+                                                if(getType(respond).equals("Patient")){
+                                                    setlay("Patient");
+                                                }
+                                                else{
+                                                    setlay("Therapist");
+                                                }
                                             }
                                             else{
-                                                setlay("Therapist");
+                                                inc.setText("incorrect login details");
+                                                passs.setText("");
+                                                bt.setVisibility(View.VISIBLE);
+                                                loading.setVisibility(View.GONE);
                                             }
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
                                         }
-                                        else{
-                                            inc.setText("incorrect login details");
-                                            passs.setText("");
-                                            bt.setVisibility(View.VISIBLE);
-                                            loading.setVisibility(View.GONE);
-                                        }
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
+
+
                                     }
-
-
-                                }
-                            });
+                                });
+                            }
                         }
-                    }
-                });
+                    });
+                }
 
             }
         });
@@ -207,6 +215,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(User user) {
                 Log.d(TAG, "Login Successful : " + user.toString());
                 Intent intent = new Intent(MainActivity.this, homeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
                 bt.setVisibility(View.VISIBLE);
                 loading.setVisibility(View.GONE);

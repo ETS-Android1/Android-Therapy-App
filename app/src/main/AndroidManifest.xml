@@ -27,7 +27,6 @@
         <activity android:name=".type_of_regi" />
         <activity android:name=".profile" />
         <activity android:name=".register_patient" />
-        <activity android:name=".chat" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
