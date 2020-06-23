@@ -9,19 +9,15 @@
         android:id="@+id/f_name"
         android:layout_width="323dp"
         android:layout_height="43dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="13dp"
+        android:layout_marginTop="120dp"
         android:background="@drawable/inputfield"
         android:ems="10"
         android:hint="    first name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/lname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/email"
@@ -149,5 +145,17 @@
         app:layout_constraintStart_toStartOf="@+id/confirm_pass_regT"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.661" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="317dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="11dp"
+        android:text="Please double check your form!"
+        android:textColor="#F81605"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_pass_regT" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

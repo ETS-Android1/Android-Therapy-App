@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -135,4 +136,5 @@ public class Conversations extends AppCompatActivity implements NavigationView.O
         Intent intent = new Intent(this, profile.class);
         startActivity(intent);
     }
+
 }

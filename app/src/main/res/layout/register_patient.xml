@@ -7,71 +7,52 @@
 
     <EditText
         android:id="@+id/confirm_pass_regP"
-        android:layout_width="323dp"
-        android:layout_height="43dp"
+        android:layout_width="309dp"
+        android:layout_height="41dp"
         android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginBottom="264dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/inputfield"
         android:ems="10"
         android:hint="    confirm password"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
 
+        android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_registerP" />
 
     <EditText
         android:id="@+id/username_registerT"
-        android:layout_width="323dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="216dp"
+        android:layout_width="310dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/inputfield"
         android:ems="10"
         android:hint="    username"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/password_registerP"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/password_registerP"
-        android:layout_width="323dp"
-        android:layout_height="43dp"
+        android:layout_width="311dp"
+        android:layout_height="42dp"
         android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginRight="44dp"
+        android:layout_marginTop="280dp"
         android:background="@drawable/inputfield"
         android:ems="10"
         android:hint="    password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.462" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/register_btnP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginLeft="48dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="275dp"
-        android:layout_marginRight="275dp"
-        android:layout_marginBottom="182dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/button"
         android:text="Register"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirm_pass_regP" />
 
@@ -102,16 +83,25 @@
 
     <TextView
         android:id="@+id/txt"
-        android:layout_width="387dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="116dp"
-        android:layout_marginBottom="42dp"
+        android:layout_width="257dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="44dp"
 
+        android:layout_marginTop="132dp"
         android:text="The username should be nothing related to your real name"
-        app:layout_constraintBottom_toTopOf="@+id/username_registerT"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="202dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="3dp"
+        android:text="Please double check your form!"
+        android:textColor="#FA1706"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_pass_regP" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

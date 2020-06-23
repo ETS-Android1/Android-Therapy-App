@@ -40,7 +40,6 @@ public class select_problemT extends AppCompatActivity {
         ap = findViewById(R.id.goOn);
         tx5 = findViewById(R.id.textView5);
         register_therapist r = new register_therapist();
-        tx5.setText("hello " + r.us);
 
 
         ap.setOnClickListener(new View.OnClickListener() {
@@ -140,6 +139,7 @@ public class select_problemT extends AppCompatActivity {
             public void onSuccess(User user) {
                 Log.d(TAG, "Login Successful : " + user.toString());
                 Intent intent = new Intent(select_problemT.this, homeActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 ap.setVisibility(View.VISIBLE);
                 loading.setVisibility(View.GONE);
                 startActivity(intent);
