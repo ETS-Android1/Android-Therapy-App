@@ -20,7 +20,7 @@ import static com.example.counselor.Constants.authKey;
 import static java.lang.Integer.parseInt;
 
 public class select_problemT extends AppCompatActivity {
-    private CheckBox fam,aca, rm;
+    private CheckBox fam,aca, rm,ada;
     private Button ap;
     private TextView tx5;
     SessionManager sessionManager;
@@ -38,6 +38,7 @@ public class select_problemT extends AppCompatActivity {
         aca = findViewById(R.id.academics);
         rm = findViewById(R.id.RM);
         ap = findViewById(R.id.goOn);
+        ada= findViewById(R.id.others);
         tx5 = findViewById(R.id.textView5);
         register_therapist r = new register_therapist();
 
@@ -100,6 +101,9 @@ public class select_problemT extends AppCompatActivity {
 
         if(rm.isChecked()){
             longString = longString + "romantic_relationships ";
+        }
+        if(ada.isChecked()){
+            longString = longString + "other";
         }
 
 
