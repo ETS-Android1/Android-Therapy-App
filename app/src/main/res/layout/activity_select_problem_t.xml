@@ -29,7 +29,7 @@
         android:layout_marginLeft="71dp"
         android:layout_marginEnd="237dp"
         android:layout_marginRight="237dp"
-        android:text="Academics"
+        android:text="academics"
         app:layout_constraintBottom_toTopOf="@+id/RM"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -42,7 +42,7 @@
         android:layout_marginLeft="71dp"
         android:layout_marginEnd="157dp"
         android:layout_marginRight="157dp"
-        android:text="Romantic Relationships"
+        android:text="romantic relationships"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +56,7 @@
         android:layout_marginLeft="71dp"
         android:layout_marginEnd="266dp"
         android:layout_marginRight="266dp"
-        android:text="Family"
+        android:text="family"
         app:layout_constraintBottom_toTopOf="@+id/academics"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

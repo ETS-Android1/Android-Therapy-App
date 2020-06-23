@@ -56,25 +56,25 @@
             android:id="@+id/family"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Family" />
+            android:text="family" />
 
         <RadioButton
             android:id="@+id/academics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Academics" />
+            android:text="academics" />
 
         <RadioButton
             android:id="@+id/romance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Romantic Relationships" />
+            android:text="romantic relationships" />
 
         <RadioButton
             android:id="@+id/other"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Other" />
+            android:text="other" />
 
     </RadioGroup>
 
