@@ -3,6 +3,7 @@ package com.example.counselor;
 import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -14,6 +15,7 @@ import android.widget.ViewFlipper;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.cometchat.pro.constants.CometChatConstants;
@@ -45,7 +47,7 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
     //private View toggle;
 
     private TextView helping,us, oops;
-    private ImageView settings, profile,chat, family, academics, romance, mental;
+    private ImageView settings, profile,chat, family, academics, romance, mental,toggle;
 
 
 
@@ -67,8 +69,21 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
         sessionManager.checkLogin();
         settings = findViewById(R.id.goToSettings);
         us = findViewById(R.id.username);
-       // toggle = findViewById(R.id.contacts);
+        toggle = findViewById(R.id.contacts);
+       /* toggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavigationView navi = findViewById(R.id.nav);
 
+                if!navi.){
+
+                    navi.openDrawer(GravityCompat.START);
+                }
+                else{
+                    navi.closeDrawer(GravityCompat.END);
+                }
+            }
+        });*/
        // toggle = new ActionBarDrawerToggle(this,draw, R.string.Open, R.string.Close);
 
 
