@@ -70,27 +70,13 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
         settings = findViewById(R.id.goToSettings);
         us = findViewById(R.id.username);
         toggle = findViewById(R.id.contacts);
-       /* toggle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavigationView navi = findViewById(R.id.nav);
-
-                if!navi.){
-
-                    navi.openDrawer(GravityCompat.START);
-                }
-                else{
-                    navi.closeDrawer(GravityCompat.END);
-                }
-            }
-        });*/
-       // toggle = new ActionBarDrawerToggle(this,draw, R.string.Open, R.string.Close);
 
 
         helping = findViewById(R.id.helpingyou);
         SessionManager n = new SessionManager(this);
-        HashMap<String, String> user = n.getUserDetail()
-                ;
+        HashMap<String, String> user = n.getUserDetail();
+
+
         String isPatient = user.get(n.isPatient);
        if(isPatient.equals("Patient")){
             helping.setText("Let us motivate you with these, Stay motivated");

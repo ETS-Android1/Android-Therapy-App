@@ -7,54 +7,54 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="141dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="336dp"
-        android:layout_marginEnd="268dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="67dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="320dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
         app:srcCompat="@drawable/logout" />
 
     <TextView
         android:id="@+id/userdet"
-        android:layout_width="197dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="368dp"
+        android:layout_width="132dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="356dp"
         android:text="Vhugala"
         android:textColor="#7D757E"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintHorizontal_bias="0.462"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/userdet3"
-        android:layout_width="197dp"
-        android:layout_height="41dp"
-        android:layout_marginBottom="276dp"
+        android:layout_width="135dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="264dp"
         android:text="Family"
         android:textColor="#7D757E"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.766"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/userdet4"
         android:layout_width="197dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="156dp"
-        android:text="Change Passwrd"
+        android:layout_marginBottom="176dp"
+        android:text=" Change Password"
         android:textColor="#7D757E"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
+        app:layout_constraintHorizontal_bias="0.602"
         app:layout_constraintStart_toStartOf="parent" />
 
     <RelativeLayout
@@ -82,46 +82,44 @@
 
     <TextView
         android:id="@+id/userdlet"
-        android:layout_width="251dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="189dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginBottom="92dp"
         android:text="Logout"
         android:textColor="#7D757E"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="142dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="6dp"
-        app:layout_constraintEnd_toStartOf="@+id/userdet"
+        android:layout_width="70dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
         app:srcCompat="@drawable/name" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="122dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
+        android:layout_width="72dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="140dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
         app:srcCompat="@drawable/probs" />
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="133dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="196dp"
+        android:layout_width="69dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="228dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
         app:srcCompat="@drawable/password" />

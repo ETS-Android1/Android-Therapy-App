@@ -11,13 +11,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:layout_marginEnd="210dp"
         android:layout_marginBottom="500dp"
         android:text="vhugala"
         android:textColor="#3E3737"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView8" />
 
     <TextView
@@ -26,12 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
         android:layout_marginTop="33dp"
-        android:layout_marginEnd="210dp"
         android:layout_marginBottom="244dp"
         android:text="vhugala"
         android:textColor="#3E3737"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -41,12 +36,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="49dp"
         android:layout_marginTop="29dp"
-        android:layout_marginEnd="210dp"
-        android:layout_marginBottom="296dp"
         android:text="vhugala"
         android:textColor="#3E3737"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
@@ -55,30 +46,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="49dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="210dp"
         android:layout_marginBottom="344dp"
         android:text="vhugala"
         android:textColor="#3E3737"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView10"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        app:layout_constraintStart_toEndOf="@+id/textView10" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="33dp"
-        android:layout_marginEnd="210dp"
         android:layout_marginBottom="396dp"
         android:text="vhugala"
         android:textColor="#3E3737"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
-        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+        app:layout_constraintStart_toEndOf="@+id/textView13" />
 
     <TextView
         android:id="@+id/textView14"
@@ -86,13 +69,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginTop="29dp"
-        android:layout_marginEnd="315dp"
-        android:layout_marginBottom="296dp"
-        android:text="SPECIALITY"
+        android:text="SPECIALITY:"
         android:textColor="#9C27B0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -102,12 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginTop="62dp"
-        android:layout_marginEnd="315dp"
-        android:layout_marginBottom="499dp"
-        android:text="USERNAME"
+        android:text="USERNAME:"
         android:textColor="#9C27B0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
@@ -117,13 +91,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginTop="33dp"
-        android:layout_marginEnd="315dp"
-        android:layout_marginBottom="344dp"
-        android:text="ID NUMBER"
+        android:text="ID NUMBER:"
         android:textColor="#9C27B0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -131,14 +100,10 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="38dp"
         android:layout_marginTop="33dp"
-        android:layout_marginEnd="340dp"
-        android:layout_marginBottom="244dp"
-        android:text="EMAIL"
+        android:text="EMAIL:"
         android:textColor="#9C27B0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
@@ -148,13 +113,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginTop="33dp"
-        android:layout_marginEnd="315dp"
-        android:layout_marginBottom="396dp"
-        android:text="LASTNAME"
+        android:text="LASTNAME:"
         android:textColor="#9C27B0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -179,13 +139,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="315dp"
-        android:layout_marginBottom="448dp"
-        android:text="FIRSTNAME"
+        android:text="FIRSTNAME:"
         android:textColor="#9C27B0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -194,11 +149,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="46dp"
-        android:layout_marginEnd="210dp"
         android:layout_marginBottom="448dp"
         android:text="vhugala"
         android:textColor="#3E3737"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView7" />
 </androidx.constraintlayout.widget.ConstraintLayout>
