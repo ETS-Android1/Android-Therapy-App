@@ -57,6 +57,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="family" />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mental"
+            android:text="mental"
+            ></RadioButton>
 
         <RadioButton
             android:id="@+id/academics"

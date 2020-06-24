@@ -26,12 +26,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="71dp"
-        android:layout_marginLeft="71dp"
         android:layout_marginEnd="237dp"
-        android:layout_marginRight="237dp"
         android:text="academics"
         app:layout_constraintBottom_toTopOf="@+id/RM"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
@@ -39,28 +38,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="71dp"
-        android:layout_marginLeft="71dp"
         android:layout_marginEnd="157dp"
-        android:layout_marginRight="157dp"
         android:text="romantic relationships"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499" />
+
+
+    <CheckBox
+        android:id="@+id/ment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="49dp"
+        android:text="mental"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"></CheckBox>
 
     <CheckBox
         android:id="@+id/family"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="71dp"
-        android:layout_marginLeft="71dp"
         android:layout_marginEnd="266dp"
-        android:layout_marginRight="266dp"
         android:text="family"
         app:layout_constraintBottom_toTopOf="@+id/academics"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <CheckBox
         android:layout_width="wrap_content"

@@ -72,18 +72,18 @@ public class profile extends AppCompatActivity {
                             }
                             try {
                                 String ppp= getpr(respond);
-                                if(ppp.equals("Family")){
+                                if(ppp.equals("family")){
                                     probs.setText("Family");
                                 }
-                                else if(ppp.equals("Academics")){
+                                else if(ppp.equals("academics")){
                                     probs.setText("Academics");
                                 }
-                                else if(ppp.equals("Romance")){
+                                else if(ppp.equals("romance")){
                                     probs.setText("Romance");
                                 }
                                 else{
                                     //mental
-                                    probs.setText("Mental");
+                                    probs.setText("mental");
                                 }
                             } catch (JSONException e) {
                                 e.printStackTrace();

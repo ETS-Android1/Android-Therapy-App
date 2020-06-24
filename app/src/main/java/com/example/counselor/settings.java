@@ -47,7 +47,8 @@ public class settings extends AppCompatActivity {
         dell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phpRequest.RequestWithParameters(settings.this,"delete.php", values );
+               phpRequest.RequestWithParameters(settings.this,"dele.php", values );
+                sessionManager.logout();
             }
         });
         log.setOnClickListener(new View.OnClickListener() {

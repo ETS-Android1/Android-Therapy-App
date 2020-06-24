@@ -190,17 +190,17 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
                             }
                             try {
                                 String ppp= getpr(respond);
-                                if(ppp.equals("Family")){
+                                if(ppp.equals("family")){
                                     for(int i =0 ; i < familyimage.length; i ++) {
                                         flipper(familyimage[i]);
                                     }
                                 }
-                                else if(ppp.equals("Academics")){
+                                else if(ppp.equals("academics")){
                                     for(int i =0 ; i < academicsimage.length; i ++) {
                                         flipper(academicsimage[i]);
                                     }
                                 }
-                                else if(ppp.equals("Romance")){
+                                else if(ppp.equals("romance")){
                                     for(int i =0 ; i < romanceimage.length; i ++){
                                         flipper(romanceimage[i]);}
                                 }

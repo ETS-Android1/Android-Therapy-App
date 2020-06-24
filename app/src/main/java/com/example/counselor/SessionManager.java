@@ -77,4 +77,5 @@ public class SessionManager {
         context.startActivity(i);
         ((profile) context).finish();
     }
+
 }
