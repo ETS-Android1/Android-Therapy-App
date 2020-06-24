@@ -108,10 +108,17 @@ public class Conversations extends AppCompatActivity implements NavigationView.O
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
-            case R.id.userList:
-                setlayout();
-                break;
 
+            case R.id.therapistprofile:
+                setlayouttherapistdet();
+
+                break;
+            case R.id.myprofile:
+                setlayoutpro();
+                break;
+            case R.id.policy:
+                setlayou();
+                break;
 
 
         }
@@ -136,5 +143,15 @@ public class Conversations extends AppCompatActivity implements NavigationView.O
         Intent intent = new Intent(this, profile.class);
         startActivity(intent);
     }
+    public void setlayouttherapistdet(){
+        Intent intent = new Intent(this, therapistDetails.class);
+        startActivity(intent);
+    }
+
+    public void setlayou() {
+        Intent intent = new Intent(this, privacy.class);
+        startActivity(intent);
+    }
+
 
 }
