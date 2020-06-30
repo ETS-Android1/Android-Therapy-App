@@ -100,7 +100,7 @@ public class select_problemT extends AppCompatActivity {
         }
 
         if(rm.isChecked()){
-            longString = longString + "romantic_relationships ";
+            longString = longString + "romantic relationships ";
         }
         if(ada.isChecked()){
             longString = longString + "other ";

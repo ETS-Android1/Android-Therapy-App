@@ -69,7 +69,7 @@ public class homeActivity extends AppCompatActivity implements NavigationView.On
         sessionManager.checkLogin();
         settings = findViewById(R.id.goToSettings);
         us = findViewById(R.id.username);
-        toggle = findViewById(R.id.contacts);
+//        toggle = findViewById(R.id.contacts);
 
 
         helping = findViewById(R.id.helpingyou);

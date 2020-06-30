@@ -3,6 +3,7 @@ package com.example.counselor;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +26,8 @@ import okhttp3.Response;
 public class profile extends AppCompatActivity {
     SessionManager s ;
 
-    private TextView userna, probs , logout, cpass;
+    private TextView userna, probs, cpass;
+    Button logout;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
@@ -81,6 +83,9 @@ public class profile extends AppCompatActivity {
                                 else if(ppp.equals("romance")){
                                     probs.setText("Romance");
                                 }
+                                else if(ppp.equals("other")){
+                                    probs.setText("Other");
+                                }
                                 else{
                                     //mental
                                     probs.setText("mental");
@@ -97,7 +102,7 @@ public class profile extends AppCompatActivity {
         });
 
         SessionManager sessionManage = new SessionManager(profile.this);
-        logout = findViewById(R.id.userdlet);
+        logout = findViewById(R.id.userlet);
         cpass = findViewById(R.id.userdet4);
         s = new SessionManager(profile.this);
         s.checkLogin();

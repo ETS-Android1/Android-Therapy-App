@@ -262,7 +262,14 @@ public class UserList extends AppCompatActivity implements NavigationView.OnNavi
         for(int i=0; i<ja.length(); i++){
             JSONObject jo = ja.getJSONObject(i);
             String person = jo.getString("username");
-            getUser(person);
+            if(person.equals("null")){
+                stopHideShimmer();
+                noUserLayout.setVisibility(View.VISIBLE);
+                rvUserList.setVisibility(View.GONE);
+            }
+            else{
+                getUser(person);
+            }
         }
 
     }

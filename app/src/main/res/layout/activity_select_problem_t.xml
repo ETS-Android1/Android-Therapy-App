@@ -71,14 +71,14 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <CheckBox
+        android:id="@+id/others"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="273dp"
+        android:layout_marginStart="71dp"
         android:layout_marginBottom="282dp"
         android:text="Other"
-        android:id="@+id/others"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
@@ -103,9 +103,9 @@
         style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="337dp"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="340dp"
         android:visibility="gone"
-        app:layout_constraintStart_toEndOf="@+id/goOn"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>
